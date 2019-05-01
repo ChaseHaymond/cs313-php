@@ -1,0 +1,35 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+#divOne {
+    background-color: red;
+    font-size: 24;
+}
+
+#divOne:hover {
+    font-weight: bold;
+}
+
+#divTwo {
+    background-color: navajowhite;
+    font-size: 20;
+}
+
+#divTwo:hover {
+    font-weight: bold;
+}
+
+#divThree {
+    background-color: darkseagreen;
+    font-size: 16;
+}
+
+#divThree:hover {
+    font-weight: bold;
+}
