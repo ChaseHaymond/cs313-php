@@ -17,7 +17,7 @@
     
 	<h1>
         
-	Welcome to Chase Haymond's Website <br>
+	Welcome to Chase Haymond's Website
         
 	<hr> 
         
