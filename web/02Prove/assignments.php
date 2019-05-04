@@ -13,7 +13,6 @@
         <hr> 
         <a id="pageLink" href="home.php"> Home Page </a> 
         <a id="pageLink" href="assignments.php"> Assignments Page </a>  
-        <?php include 'title.php';?>
     </h1>
     
     <div id="center">
@@ -24,6 +23,10 @@
         <hr>
         <li>To be announced</li>
     
+    </div>
+    <br>
+        <div>
+         <?php include 'title.php';?>
     </div>
 </body>
 </html>

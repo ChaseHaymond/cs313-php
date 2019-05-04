@@ -23,8 +23,6 @@
 	<a id="pageLink" href="home.php"> Home Page </a> 
         
 	<a id="pageLink" href="assignments.php"> Assignments Page </a> 
-        
-        <?php include 'title.php';?>
     
 	</h1>
     
@@ -66,6 +64,10 @@
 	<br>About Me <hr> I am from Arvada, Colorado. I was born and raised there. I am studying computer science. If everything goes acording to plan, I should graduate next winter. I like web development but I am not the best at design. To the left are some pictures of things I like to do.
     
 	</div>
+    <br>
+    <div>
+         <?php include 'title.php';?>
+    </div>
 
 </body>
 </html>
