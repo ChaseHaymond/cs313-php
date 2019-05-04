@@ -26,7 +26,9 @@
     
 	</h1>
     
-    
+       <div>
+         <?php include 'title.php';?>
+    </div>
 
 	<div id="left">
         
@@ -65,9 +67,7 @@
     
 	</div>
     <br>
-    <div id="footer">
-         <?php include 'title.php';?>
-    </div>
+ 
 
 </body>
 </html>

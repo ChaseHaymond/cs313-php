@@ -71,6 +71,7 @@ th {
 #footer {
     width:40%;
     margin: auto;
+    position:absolute;
     bottom:0;
 /*    height:20px;    Height of the footer */
     background:#8EE4AF;
