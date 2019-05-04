@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <?php include 'title.php';?>
     
 	<h1>
         
@@ -24,6 +23,8 @@
 	<a id="pageLink" href="home.php"> Home Page </a> 
         
 	<a id="pageLink" href="assignments.php"> Assignments Page </a> 
+        
+        <?php include 'title.php';?>
     
 	</h1>
     
