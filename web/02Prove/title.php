@@ -1,7 +1,7 @@
 
 <?php
-echo "Today's date is :"; 
-$today = date("d/m/Y"); 
+echo "Time is :"; 
+$today = date("h:i:sa");
 echo $today; 
 	//echo "<h1> Welcome to Chase Haymond's Website <hr>";
 
