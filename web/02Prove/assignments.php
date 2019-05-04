@@ -6,6 +6,10 @@
     <script src="main.js"></script>
 </head>
 <body>
+    
+         
+	<?php include 'title.php';?>
+<!--
     <h1>
         Welcome to Chase Haymond's Website 
         <hr> 
@@ -13,6 +17,7 @@
         <a id="pageLink" href="assignments.php"> Assignments Page </a>  
 
     </h1>
+-->
     
     <div id="center">
         <h2>

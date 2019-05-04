@@ -1,3 +1,15 @@
 <?php
-echo "<p>Copyright &copy; 1999-" . date("Y") . " W3Schools.com</p>";
+
+	echo "<h1>
+        
+	Welcome to Chase Haymond's Website 
+        
+	<hr> 
+        
+	<a id="pageLink" href="home.php"> Home Page </a> 
+        
+	<a id="pageLink" href="assignments.php"> Assignments Page </a> 
+    
+	</h1>";
+
 ?>
