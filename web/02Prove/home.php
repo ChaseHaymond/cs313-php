@@ -14,10 +14,6 @@
 
 <body>
     
-         
-	<?php include 'title.php';?>
-    
-<!--
 	<h1>
         
 	Welcome to Chase Haymond's Website 
@@ -29,7 +25,6 @@
 	<a id="pageLink" href="assignments.php"> Assignments Page </a> 
     
 	</h1>
--->
     
     
 
