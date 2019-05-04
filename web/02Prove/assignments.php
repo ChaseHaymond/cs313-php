@@ -25,7 +25,7 @@
     
     </div>
     <br>
-    <div id="center">
+    <div id="right">
          <?php include 'title.php';?>
     </div>
 </body>

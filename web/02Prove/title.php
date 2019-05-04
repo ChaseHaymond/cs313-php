@@ -1,6 +1,6 @@
 
 <?php
-echo "Time is :"; 
+echo "Server time is :"; 
 $today = date("h:i:sa");
 echo $today; 
 	//echo "<h1> Welcome to Chase Haymond's Website <hr>";
