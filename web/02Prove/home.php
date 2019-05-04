@@ -13,11 +13,11 @@
 </head>
 
 <body>
+    <?php include 'title.php';?>
     
 	<h1>
         
 	Welcome to Chase Haymond's Website <br>
-        <?php include 'title.php';?>
         
 	<hr> 
         
@@ -65,11 +65,6 @@
 	<br>About Me <hr> I am from Arvada, Colorado. I was born and raised there. I am studying computer science. If everything goes acording to plan, I should graduate next winter. I like web development but I am not the best at design. To the left are some pictures of things I like to do.
     
 	</div>
-
-    
-    
-     
-	<?php include 'title.php';?>
 
 </body>
 </html>
