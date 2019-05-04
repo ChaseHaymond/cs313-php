@@ -26,7 +26,7 @@
     
 	</h1>
     
-       <div>
+       <div id="center">
          <?php include 'title.php';?>
     </div>
 

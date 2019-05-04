@@ -14,6 +14,9 @@
         <a id="pageLink" href="home.php"> Home Page </a> 
         <a id="pageLink" href="assignments.php"> Assignments Page </a>  
     </h1>
+    <div id="center">
+         <?php include 'title.php';?>
+    </div>
     
     <div id="center">
         <h2>
@@ -25,8 +28,5 @@
     
     </div>
     <br>
-    <div id="time">
-         <?php include 'title.php';?>
-    </div>
 </body>
 </html>
