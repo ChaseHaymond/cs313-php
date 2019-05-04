@@ -16,7 +16,8 @@
     
 	<h1>
         
-	Welcome to Chase Haymond's Website 
+	Welcome to Chase Haymond's Website <br>
+        <?php include 'title.php';?>
         
 	<hr> 
         
