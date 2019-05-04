@@ -1,6 +1,9 @@
 
 <?php
-	echo "<h1> Welcome to Chase Haymond's Website <hr>";
+echo "Today's date is :"; 
+$today = date("d/m/Y"); 
+echo $today; 
+	//echo "<h1> Welcome to Chase Haymond's Website <hr>";
 
 //    <h1>
 //        Welcome to Chase Haymond's Website 
