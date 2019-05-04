@@ -18,6 +18,8 @@
          <?php include 'title.php';?>
     </div>
     
+    <br>
+    
     <div id="center">
         <h2>
         Assignments
