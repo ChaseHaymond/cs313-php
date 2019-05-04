@@ -65,7 +65,7 @@
     
 	</div>
     <br>
-    <div id="center">
+    <div id="time">
          <?php include 'title.php';?>
     </div>
 

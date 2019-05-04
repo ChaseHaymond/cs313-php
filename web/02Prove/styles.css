@@ -68,6 +68,17 @@ th {
     text-align: center
 }
 
+#time {
+     width: 30%;
+    margin: auto;
+    color: #05386B;
+    background-color: #8EE4AF;
+    border: 5px solid #EDF5E1;
+    text-align: center
+    position: fixed;
+    bottom: 0;
+}
+
 
 
 .dropbtn {
