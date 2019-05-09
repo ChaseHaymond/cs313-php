@@ -1,13 +1,18 @@
+<?php echo "User Name: " . $_POST["name"] . "<br>"; 
+	echo "Email: " . "<a href=\"mailto:" . $_POST["email"]> . "\">" . $_POST["email"] . "</a><br>";
+	echo "Major: " . $_POST["major"] . "<br>";
+	echo "Comment: " . $_POST["comment"] . "<br>";
+	?>
+
+
+
+<!DOCTYPE html>
 <html>
+<head>
+	<title></title>
+</head>
 <body>
-
-Welcome <?php echo $_GET["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?><br>
-Your Major is: <?php echo $_POST["major"]; ?><br><br>
-<?php echo $_POST["comment"]; ?> <br> <br>
-    Countries you have been to: 
-
-    
+	
 
 </body>
 </html>
