@@ -6,7 +6,7 @@
 
     echo "User Name: " . $_POST["name"] . "<br>"; 
 	//echo "Email: " . "<a href=\"mailto:" . $_POST["email"]> . "\">" . $_POST["email"] . "</a><br>";
-    echo "<a href='".$link_address."'>Mail To:</a>";
+    echo "<a href='".$link_address."'>Mail To: . $_POST["email"] </a>";
     echo "Email: " . $_POST["email"] . "<br>";
 	echo "Major: " . $_POST["major"] . "<br>";
 	echo "Comment: " . $_POST["comment"] . "<br>";
