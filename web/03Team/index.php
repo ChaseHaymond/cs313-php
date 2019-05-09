@@ -18,10 +18,10 @@
 
 	<label>Major</label> <br>
     
-    Computer Science: <input type="radio" name="major" value="Computer Science"> <br>
-    Web Design and Development: <input type="radio" name="major" value="Web Design and Development"> <br>
-    Computer Information and Technology <input type="radio" name="major" value="Computer Information and Technology"> <br>
-    Computer Engineering <input type="radio" name="major" value="Computer Engineering"> <br>
+    <input type="radio" name="major" value="Computer Science"> Computer Science  <br>
+    <input type="radio" name="major" value="Web Design and Development"> Web Design and Development  <br>
+    <input type="radio" name="major" value="Computer Information and Technology"> Computer Information and Technology  <br>
+    <input type="radio" name="major" value="Computer Engineering"> Computer Engineering  <br>
 	
 
 	Comment: <br> <textarea name="comment"></textarea>
