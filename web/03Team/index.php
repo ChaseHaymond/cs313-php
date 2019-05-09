@@ -1,6 +1,5 @@
 <?php
     $majors = array("CS"=>"Computer Science", "WD"=>"Web Design and Development", "CIT"=>"Computer Information and Technology", "CE" => "Computer Engineering");
-    echo "php file";
 ?>
 
 
@@ -30,7 +29,7 @@
 
 	Comment: <br> <textarea name="comment"></textarea>
 
-	<input type="submit" value="Submit"> <br>
+    <button type="submit"> Submit</button><br>
 
 
 	<input type="checkbox" name="NAmerica" value="North America"> North America <br>
