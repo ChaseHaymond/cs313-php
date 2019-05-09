@@ -20,7 +20,7 @@
 	<?php 
         foreach ($majors as $key=>$value) {
 		?>
-		<input type='radio' name=“major” value=“<?php echo $key ?>”> <?php echo $value ?> <br>
+		<input type='radio' name=“major” value='<?php echo $key ?>'> <?php echo $value ?> <br>
     
         <?php
         }
