@@ -3,16 +3,3 @@
 	echo "Major: " . $_POST["major"] . "<br>";
 	echo "Comment: " . $_POST["comment"] . "<br>";
 	?>
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	
-
-</body>
-</html>
