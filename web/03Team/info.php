@@ -1,5 +1,9 @@
-<?php echo "User Name: " . $_POST["name"] . "<br>"; 
-	
-	echo "Major: " . isset($_POST["major"]) . "<br>";
+<?php 
+    if (isset($_POST["major"])) {
+        $major = $_POST["major"]
+    }
+    echo "User Name: " . $_POST["name"] . "<br>"; 
+//	echo "Email: " . "<a href=\"mailto:" . $_POST["email"]> . "\">" . $_POST["email"] . "</a><br>";
+	echo "Major: " . $major . "<br>";
 	echo "Comment: " . $_POST["comment"] . "<br>";
 	?>
