@@ -17,14 +17,21 @@
 	Email:<input type="text" name="email"><br>
 
 	<label>Major</label> <br>
+<!--
 	<?php 
         foreach ($majors as $key=>$value) {
 		?>
-		<input type='radio' name=“major” value=“test”> <?php echo $value ?> <br>
+		<input type='radio' name=“major” value=“<?php echo $key ?>”> <?php echo $value ?> <br>
     
         <?php
         }
     ?>
+-->
+    
+    <input type="radio" name="major" value="Computer Science"> <br>
+    <input type="radio" name="major" value="Web Design and Development"> <br>
+    <input type="radio" name="major" value="Computer Information and Technology"> <br>
+    <input type="radio" name="major" value="Computer Engineering"> <br>
 	
 
 	Comment: <br> <textarea name="comment"></textarea>
