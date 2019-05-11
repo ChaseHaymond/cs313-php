@@ -30,8 +30,8 @@
 					<th align="left"><input type="text" name="State"><br> </th>
 				</tr>
                 <tr>
-                    <th><button onclick="location.href='home.html'" type="button">continue shopping</button></th>
-                    <th><button onclick="location.href='confirm.html'" type="button">complete the purchase</button></th>
+                    <th><button onclick="location.href='home.php'" type="button">continue shopping</button></th>
+                    <th><button onclick="location.href='confirm.php'" type="button">complete the purchase</button></th>
                 </tr>
  					<br>
  				</form>

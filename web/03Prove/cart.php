@@ -25,7 +25,7 @@
             <td id="price">$20.00</td>
           </tr>
          <tr>
-             <td id="checkout"><button onclick="location.href='checkout.html'" type="button">Checkout</button></td>
+             <td id="checkout"><button onclick="location.href='checkout.php'" type="button">Checkout</button></td>
          </tr>
          
          
