@@ -10,6 +10,15 @@ session_start();
 </head>
     
 <body>
+    
+    
+    
+    <?php
+    // Set session variables
+    $_SESSION[cart]=array();
+    ?>
+
+    
     <h1>Welcome to Chase's Store &nbsp; - 
     <a id="pageLink" href="home.php"> Browse Items </a> 
         &nbsp;-&nbsp;
