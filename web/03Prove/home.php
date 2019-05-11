@@ -62,5 +62,11 @@ session_start();
     </table> 
     
 </body>
+    
+     <?php
+function writeMsg() {
+    echo "Hello world!";
+}
+?> 
 
 </html>
