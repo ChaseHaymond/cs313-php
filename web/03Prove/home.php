@@ -19,14 +19,6 @@ session_start();
     $_SESSION[cart]=array();
     ?>
     
-    <?php
-    function addRamen() {
-//        $_SESSION[cart]=array_diff($_SESSION[cart],"ramen");
-        echo "<script type='text/javascript'>alert('Clicked Ramen');</script>";
-    }
-?> 
-
-    
     <h1>Welcome to Chase's Store &nbsp; - 
     <a id="pageLink" href="home.php"> Browse Items </a> 
         &nbsp;-&nbsp;
