@@ -10,7 +10,7 @@ session_start();
 </head>
     
 <body>
-    <?php include 'items.php';?>
+    <?php include 'items.php';?
     
     
     
@@ -18,6 +18,13 @@ session_start();
     // Set session variables
     $_SESSION[cart]=array();
     ?>
+    
+    <?php
+    function addRamen() {
+//        $_SESSION[cart]=array_diff($_SESSION[cart],"ramen");
+        echo "<script type='text/javascript'>alert('Clicked Ramen');</script>";
+    }
+?> 
 
     
     <h1>Welcome to Chase's Store &nbsp; - 
