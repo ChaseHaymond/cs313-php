@@ -10,7 +10,7 @@ $_SESSION['item']=$_GET['item'];
     <?php echo $_SESSION['item']; 
         
         
-        $message = "wrong answer";
+        $message = echo $_SESSION['item'];
 echo "<script type='text/javascript'>alert('$message');</script>";
         
         
