@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html>
 <head>
     <title>Chase's Store</title>
@@ -7,9 +6,6 @@
 </head>
     
 <body>
-    
-
-
     <h1>Welcome to Chase's Store &nbsp; - 
     <a id="pageLink" href="home.php"> Browse Items </a> 
         &nbsp;-&nbsp;
