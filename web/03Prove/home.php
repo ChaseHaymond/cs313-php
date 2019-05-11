@@ -64,7 +64,7 @@ session_start();
 </body>
     
      <?php
-function writeMsg() {
+function addRamen() {
     echo "Hello world!";
 }
 ?> 
