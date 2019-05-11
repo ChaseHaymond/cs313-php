@@ -19,7 +19,10 @@ session_start();
     $_SESSION[cart]=array();
     ?>
     
-
+<?php
+function writeMsg() {
+    echo "Hello world!";
+}
 
     
     <h1>Welcome to Chase's Store &nbsp; - 
