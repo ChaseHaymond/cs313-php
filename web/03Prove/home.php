@@ -65,7 +65,8 @@ session_start();
     
      <?php
 function addRamen() {
-    echo "Hello world!";
+    $message = "wrong answer";
+    echo "<script type='text/javascript'>alert('$message');</script>";
 }
 ?> 
 
