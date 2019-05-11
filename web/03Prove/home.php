@@ -10,6 +10,7 @@ session_start();
 </head>
     
 <body>
+    <?php include 'items.php';?>
     
     
     
@@ -41,7 +42,7 @@ session_start();
             <td id="price">$1.00</td>
           </tr>
           <tr>
-             <td id="add"><button>Add To Cart</button></td>
+             <td id="add"><button onclick="addRamen()">Add To Cart</button></td>
           </tr>
           <tr>
             <td id="picture"><img src="shoes.jpg" alt="shoes" height="100px"></td>
