@@ -11,13 +11,14 @@ session_start();
     
 <body>
     
-    
-    
-    
-    <?php
+<?php
     // Set session variables
-    $_SESSION[cart]=array();
-    ?>
+    $_SESSION["item"] = "none";
+?>
+    
+    
+    //$_SESSION[cart]=array();
+
     
     <h1>Welcome to Chase's Store &nbsp; - 
     <a id="pageLink" href="home.php"> Browse Items </a> 
@@ -41,7 +42,11 @@ session_start();
             <td id="price">$1.00</td>
           </tr>
           <tr>
-             <td id="add"><button onclick="addRamen()">Add To Cart</button></td>
+             <td id="add">
+                <form action="addItem.php?item=ramen">
+                    <input type="submit" value="Add To Cart" />
+                </form>
+              </td>
           </tr>
           <tr>
             <td id="picture"><img src="shoes.jpg" alt="shoes" height="100px"></td>
@@ -63,11 +68,5 @@ session_start();
     
 </body>
     
-     <?php
-function addRamen() {
-    $message = "wrong answer";
-    echo "<script type='text/javascript'>alert('$message');</script>";
-}
-?> 
 
 </html>
