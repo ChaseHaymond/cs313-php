@@ -71,7 +71,7 @@ session_start();
         }
         echo "<hr>";
         
-        echo "Will be delivered to " . htmlspecialchars($_GET['name']);
+        echo "Will be delivered to " . htmlspecialchars($_GET['Adress'] . " " . $_GET['City'] . " " . $_GET['Zip'] . " " . $_GET['State']);
     
     
         
