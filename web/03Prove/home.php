@@ -16,6 +16,8 @@ session_start();
 // Echo session variables that were set on previous page
 $_SESSION["glasses"];
 $_SESSION["ramen"];
+$_SESSION["shoes"];
+$_SESSION["toothbrush"];
 ?>
 
     

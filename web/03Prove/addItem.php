@@ -22,6 +22,21 @@ session_start();
             echo $_SESSION["glasses"] . "<br>";
         }
         
+        if ($_GET['item'] == "ramen") {
+            $_SESSION["ramen"]++;
+            echo $_SESSION["ramen"] . "<br>";
+        }
+        
+        if ($_GET['item'] == "shoes") {
+            $_SESSION["shoes"]++;
+            echo $_SESSION["shoes"] . "<br>";
+        }
+        
+        if ($_GET['item'] == "toothbrush") {
+            $_SESSION["toothbrush"]++;
+            echo $_SESSION["toothbrush"] . "<br>";
+        }
+        
         echo $_SESSION["ramen"] = 0;
         
     ?>
