@@ -12,7 +12,11 @@ session_start();
 //        echo $_GET['item'] . "<br>";    
 //        
 //        array_push($_SESSION['item'],$_GET['item']);
-        echo $_SESSION["glasses"] = 0 . "<br>";
+        if ($_GET['item'] == "glasses") {
+            $_SESSION["glasses"]++;
+            echo $_SESSION["glasses"] . "<br>";
+        }
+        
         echo $_SESSION["ramen"] = 0;
         
     ?>
