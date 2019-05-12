@@ -32,7 +32,7 @@ session_start();
                 echo "<tr>";
                     echo "<td> Item: Shoes </td>";
                     echo "<td> Quantity: " . $shoes . "</td>";
-                    echo "<td> price - $" . 50 * $shoes . ".00</td>";
+                    echo "<td> - price - $" . 50 * $shoes . ".00</td>";
                 
                     echo "<td>";
                     echo "<form action=\"removeItem.php\" method=\"get\">";
@@ -49,7 +49,7 @@ session_start();
                 echo "<tr>";
                     echo "<td> Item: Glasses </td>";
                     echo "<td> Quantity: " . $glasses . "</td>";
-                    echo "<td> price - $" . 20 * $glasses . ".00</td>";
+                    echo "<td> - price - $" . 20 * $glasses . ".00</td>";
                 
                     echo "<td>";
                     echo "<form action=\"removeItem.php\" method=\"get\">";
@@ -66,7 +66,7 @@ session_start();
                 echo "<tr>";
                     echo "<td> Item: Toothbrush </td>";
                     echo "<td> Quantity: " . $toothbrush . "</td>";
-                    echo "<td> price - $" . 30 * $toothbrush . ".00</td>";
+                    echo "<td> - price - $" . 30 * $toothbrush . ".00</td>";
                 
                     echo "<td>";
                     echo "<form action=\"removeItem.php\" method=\"get\">";
@@ -82,7 +82,7 @@ session_start();
                 echo "<tr>";
                     echo "<td> Item: Ramen </td>";
                     echo "<td> Quantity: " . $ramen . "</td>";
-                    echo "<td> price - $" .  $ramen . ".00</td>";
+                    echo "<td> - price - $" .  $ramen . ".00</td>";
                 
                     echo "<td>";
                     echo "<form action=\"removeItem.php\" method=\"get\">";
@@ -94,29 +94,13 @@ session_start();
                 echo "</tr>";
             }
         
+            echo "<tr>";
+            echo "<td> <button onclick=\"window.location.href = 'checkout.php';\">Checkout</button>"
             echo "</table>";
 
-        
         ?>
-<!--
-     <table>
-          <tr>
-            <td id="picture"><img src="glasses2.jpg" alt="glasses" height="100px"></td>
-            <td id="desc">A good pair of sunglasses</td>
-            <td id="price">$20.00</td>
-          </tr>
-         <tr>
-            <td id="picture"><img src="glasses2.jpg" alt="glasses" height="100px"></td>
-            <td id="desc">A good pair of sunglasses</td>
-            <td id="price">$20.00</td>
-          </tr>
-         <tr>
-             <td id="checkout"><button onclick="location.href='checkout.php'" type="button">Checkout</button></td>
-         </tr>
-         
-         
-    </table> 
--->
+        
+        
     </p>
     
 </body>
