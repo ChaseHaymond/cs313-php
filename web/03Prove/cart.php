@@ -24,15 +24,24 @@ session_start();
             $glasses = $_SESSION["glasses"];
             $toothbrush = $_SESSION["toothbrush"];
             $ramen = $_SESSION["ramen"];
-            $message = "S: " . $shoes . ", G: " . $glasses . ", T: " . $toothbrush . ", R: " . $ramen;
-            echo "<script type='text/javascript'>alert('$message');</script>";
+//            $message = "S: " . $shoes . ", G: " . $glasses . ", T: " . $toothbrush . ", R: " . $ramen;
+//            echo "<script type='text/javascript'>alert('$message');</script>";
         
             echo "<table>";
             if ($shoes > 0) {
                 echo "<tr>";
                     echo "<td> Item: Shoes </td>";
                     echo "<td> Quantity: " . $shoes . "</td>";
-                    echo "<td> price - " . 20 * $shoes . "</td>";
+                    echo "<td> price - " . 50 * $shoes . "</td>";
+                
+                    echo "<td>"
+                    echo "<form action=\"addItem.php\" method=\"get\">"
+                    echo "<input type=\"hidden\" name=\"item\" value=\"shoes\">"
+                    echo "<input type=\"submit\" value=\"Add To Cart\" />"
+                    echo "</form>"
+                    echo "</td>"
+                
+                
                 echo "</tr>";
             }
         
@@ -48,7 +57,7 @@ session_start();
                 echo "<tr>";
                     echo "<td> Item: Toothbrush </td>";
                     echo "<td> Quantity: " . $toothbrush . "</td>";
-                    echo "<td> price - " . 20 * $toothbrush . "</td>";
+                    echo "<td> price - " . 30 * $toothbrush . "</td>";
                 echo "</tr>";
             }
         
@@ -61,6 +70,8 @@ session_start();
             }
         
             echo "</table>";
+
+        
         ?>
 <!--
      <table>
