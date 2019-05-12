@@ -7,6 +7,11 @@ session_start();
 <html>
     <body>
     
+        <h1>Welcome to Chase's Store &nbsp; - 
+    <a id="pageLink" href="home.php"> Browse Items </a> 
+        &nbsp;-&nbsp;
+	<a id="pageLink" href="cart.php"> View Cart </a> 
+    </h1>
     
     <?php        
 //        echo $_GET['item'] . "<br>";    
