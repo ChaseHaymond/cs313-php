@@ -20,7 +20,7 @@ session_start();
             echo "<br>";
         }
         
-        header("Location: ./home.php"); /* Redirect browser */
+        header("Location: home.php"); /* Redirect browser */
         exit();
     ?>
     </body>
