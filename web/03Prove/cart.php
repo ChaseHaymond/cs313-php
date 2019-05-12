@@ -36,6 +36,30 @@ session_start();
                 echo "</tr>";
             }
         
+            if ($glasses > 0) {
+                echo "<tr>";
+                    echo "<td> Item: Glasses </td>";
+                    echo "<td> Quantity: " . $glasses . "</td>";
+                    echo "<td> price - " . 20 * $glasses . "</td>";
+                echo "</tr>";
+            }
+        
+            if ($toothbrush > 0) {
+                echo "<tr>";
+                    echo "<td> Item: Toothbrush </td>";
+                    echo "<td> Quantity: " . $toothbrush . "</td>";
+                    echo "<td> price - " . 20 * $toothbrush . "</td>";
+                echo "</tr>";
+            }
+        
+            if ($ramen > 0) {
+                echo "<tr>";
+                    echo "<td> Item: Ramen </td>";
+                    echo "<td> Quantity: " . $ramen . "</td>";
+                    echo "<td> price - $" .  $ramen . ".00</td>";
+                echo "</tr>";
+            }
+        
             echo "</table>";
         ?>
 <!--
