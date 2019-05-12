@@ -14,8 +14,8 @@ session_start();
 
 <?php
 // Echo session variables that were set on previous page
-$_SESSION["glasses"] = 0;
-$_SESSION["ramen"] =0;
+$_SESSION["glasses"];
+$_SESSION["ramen"];
 ?>
 
     
