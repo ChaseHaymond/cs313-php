@@ -8,9 +8,14 @@ session_start();
     
     <?php 
         
-        $_SESSION['item']=$_GET['item'];
+        $_SESSION['test'] = "test";
+        
+        $_SESSION['item'] = $_GET['item'];
         
         echo $_SESSION['item']; 
+        
+        echo "Favorite color is " . $_SESSION["test"] . ".<br>";
+        echo "Favorite color is " . $_SESSION["item"] . ".<br>";
         
         
         $message = echo $_SESSION['item'];
