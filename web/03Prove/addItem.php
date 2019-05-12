@@ -16,7 +16,7 @@ session_start();
         echo "<br>";
         
         foreach($_SESSION['item'] as $x => $x_value) {
-            echo $x . ", " . $x_value;
+            echo $x_value;
             echo "<br>";
         }
     ?>
