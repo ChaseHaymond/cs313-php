@@ -10,7 +10,7 @@
     <p id="content">
         Please enter your info
     <table>
-    		<form  action="/action_page.php" method="get">
+    		<form  action="confirm.php" method="get">
     		    <tr>
     		    	<th align="right"> Your Name: </th>
 					<th align="left"><input type="text" name="name" ><br></th>
@@ -32,8 +32,8 @@
 					<th align="left"><input type="text" name="State"><br> </th>
 				</tr>
                 <tr>
-                    <th><button onclick="location.href='home.php'" type="button">continue shopping</button></th>
-                    <th><button onclick="location.href='confirm.php'" type="button">complete the purchase</button></th>
+                    <th><button onclick="location.href='home.php'" type="button">Continue Shopping</button></th>
+                    <th> <input type="submit" value="Confirm Order"> </th>
                 </tr>
  					<br>
  				</form>
