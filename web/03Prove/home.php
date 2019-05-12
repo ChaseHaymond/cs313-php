@@ -44,6 +44,7 @@ session_start();
           <tr>
              <td id="add">
                 <form action="addItem.php?item=ramen" method="get">
+                    <input type="hidden" name="ramenItme" value="ramen">
                     <input type="submit" value="Add To Cart" />
                 </form>
               </td>
