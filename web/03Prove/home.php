@@ -13,11 +13,8 @@ session_start();
     
 <?php
     // Set session variables
-    $_SESSION["item"] = "none";
+    $_SESSION["item"] = array();
 ?>
-    
-    
-    //$_SESSION[cart]=array();
 
     
     <h1>Welcome to Chase's Store &nbsp; - 

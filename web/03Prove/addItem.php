@@ -6,11 +6,12 @@ session_start();
     <body>
     
     
-    <?php 
-        $_SESSION['item'] = $_GET['item'];
+    <?php        
+        echo $_GET['item'] . "<br>";    
         
-        echo $_SESSION['item'];      
+        array_push($_SESSION['item'],$_GET['item']);
         
-        ?>
+        print_r( $_SESSION['item'])
+    ?>
     </body>
 </html>
