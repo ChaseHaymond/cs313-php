@@ -43,7 +43,7 @@ session_start();
           </tr>
           <tr>
              <td id="add">
-                <form action="addItem.php?item=ramen">
+                <form action="addItem.php?item=ramen" method="get">
                     <input type="submit" value="Add To Cart" />
                 </form>
               </td>
