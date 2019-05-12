@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <html>
 <head>
     <title>Chase's Store</title>
@@ -13,6 +18,16 @@
     
     <p id="content">
         Contents of your cart <br><br>
+        
+        <?php
+            $shoes = $_SESSION["shoes"];
+            $glasses = $_SESSION["glasses"];
+            $toothbrush = $_SESSION["toothbrush"];
+            $ramen = $_SESSION["ramen"];
+            $message = "S: " . $shoes . ", G: " . $glasses . ", T: " . $toothbrush . ", R: " . $ramen;
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        ?>
+<!--
      <table>
           <tr>
             <td id="picture"><img src="glasses2.jpg" alt="glasses" height="100px"></td>
@@ -30,6 +45,7 @@
          
          
     </table> 
+-->
     </p>
     
 </body>

@@ -7,16 +7,8 @@ session_start();
 <html>
     <body>
     
-        <h1>Welcome to Chase's Store &nbsp; - 
-    <a id="pageLink" href="home.php"> Browse Items </a> 
-        &nbsp;-&nbsp;
-	<a id="pageLink" href="cart.php"> View Cart </a> 
-    </h1>
-    
     <?php        
-//        echo $_GET['item'] . "<br>";    
-//        
-//        array_push($_SESSION['item'],$_GET['item']);
+
         if ($_GET['item'] == "glasses") {
             $_SESSION["glasses"]++;
             //echo $_SESSION["glasses"] . "<br>";
@@ -41,6 +33,9 @@ session_start();
         echo $_SESSION["ramen"] . "<br>";
         echo $_SESSION["shoes"] . "<br>";
         echo $_SESSION["toothbrush"] . "<br>";
+        
+        header("home.php"); /* Redirect browser */
+exit();
         
     ?>
     </body>
