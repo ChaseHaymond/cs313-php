@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <html>
 <head>
     <title>Chase's Store</title>
@@ -13,25 +18,20 @@
     
     
     <?php        
-        echo "<h1> test </h1>";
-        $test = "test2";
-        echo $test;
-    
-    
-    
-    
-//        echo $_GET['item'] . "<br>";    
-//        
-//        array_push($_SESSION['item'],$_GET['item']);
-//        
-//        print_r( $_SESSION['item']);
-//            
-//        echo "<br>";
-//        
-//        foreach($_SESSION['item'] as $x => $x_value) {
-//            echo $x_value;
-//            echo "<br>";
-//        }
+//        echo "<h1> test </h1>";
+//        $test = "test2";
+//        echo $test;
+//    
+//        $test3 = 
+        
+        print_r( $_SESSION['item']);
+            
+        echo "<br>";
+        
+        foreach($_SESSION['item'] as $x => $x_value) {
+            echo $x_value;
+            echo "<br>";
+        }
     ?>
     
 <!--

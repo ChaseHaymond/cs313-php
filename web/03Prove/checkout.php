@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <html>
 <head>
     <title>Chase's Store</title>
