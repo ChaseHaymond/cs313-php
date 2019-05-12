@@ -19,9 +19,6 @@ session_start();
             echo $x_value;
             echo "<br>";
         }
-        
-//        header("Location: home.php"); /* Redirect browser */
-//        exit();
     ?>
     </body>
 </html>

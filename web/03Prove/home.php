@@ -79,11 +79,6 @@ session_start();
          </tr>
     </table> 
     
-    <?php
-        $message = print_r( $_SESSION['item']);
-        echo "test";
-    ?>
-    
 </body>
     
 
