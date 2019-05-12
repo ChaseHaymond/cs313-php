@@ -10,7 +10,7 @@ session_start();
         
         $_SESSION['test'] = "test";
         
-        $_SESSION['item'] = $_GET['ramenItme'];
+        $_SESSION['item'] = $_GET['item'];
         
         echo $_SESSION['item']; 
         

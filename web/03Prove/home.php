@@ -34,7 +34,12 @@ session_start();
             <td id="price">$20.00</td>
           </tr>
          <tr>
-             <td id="add"><button>Add To Cart</button></td>
+             <td id="add">
+             <form action="addItem.php" method="get">
+                    <input type="hidden" name="item" value="glasses">
+                    <input type="submit" value="Add To Cart" />
+             </form>
+             </td>
          </tr>
          <tr>
             <td id="picture"><img src="ramen.jpg" alt="ramen" height="100px"></td>
@@ -43,8 +48,8 @@ session_start();
           </tr>
           <tr>
              <td id="add">
-                <form action="addItem.php?item=ramen" method="get">
-                    <input type="hidden" name="ramenItme" value="ramen">
+                <form action="addItem.php" method="get">
+                    <input type="hidden" name="item" value="ramen">
                     <input type="submit" value="Add To Cart" />
                 </form>
               </td>
@@ -55,7 +60,10 @@ session_start();
             <td id="price">$50.00</td>
           </tr>
          <tr>
-             <td id="add"><button>Add To Cart</button></td>
+             <form action="addItem.php" method="get">
+                    <input type="hidden" name="item" value="shoes">
+                    <input type="submit" value="Add To Cart" />
+             </form>
          </tr>
          <tr>
             <td id="picture"><img src="toothbrush.jpg" alt="toothbrush" height="100px"></td>
@@ -63,7 +71,12 @@ session_start();
             <td id="price">$30.00</td>
           </tr>
          <tr>
-             <td id="add"><button>Add To Cart</button></td>
+             <td id="add">
+             <form action="addItem.php" method="get">
+                    <input type="hidden" name="item" value="toothbrush">
+                    <input type="submit" value="Add To Cart" />
+             </form>
+             </td>
          </tr>
     </table> 
     
