@@ -90,6 +90,20 @@ session_start();
             echo "<td> <button onclick=\"window.location.href = 'checkout.php';\">Checkout</button>";
             echo "</tr>";
             echo "</table>";
+    
+        echo "<hr>";
+        $total = $ramen + 30 * $toothbrush + 20 * $glasses + 50 * $shoes;
+        if ($total > 0) {
+            echo "Total: $" . $ramen + 30 * $toothbrush + 20 * $glasses + 50 * $shoes . ".00";
+        } else {
+            echo "Total: $0.00";
+        }
+        echo "<hr>";
+        
+        echo "Will be delivered to " . $_GET['address'];
+    
+    
+        
 
         ?>
         
