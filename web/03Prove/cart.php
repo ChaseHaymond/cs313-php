@@ -95,7 +95,8 @@ session_start();
             }
         
             echo "<tr>";
-            echo "<td> <button onclick=\"window.location.href = 'checkout.php';\">Checkout</button>"
+            echo "<td> <button onclick=\"window.location.href = 'checkout.php';\">Checkout</button>";
+            echo "</tr>";
             echo "</table>";
 
         ?>
