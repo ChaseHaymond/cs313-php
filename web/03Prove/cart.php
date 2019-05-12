@@ -37,7 +37,7 @@ session_start();
                     echo "<td>";
                     echo "<form action=\"addItem.php\" method=\"get\">";
                     echo "<input type=\"hidden\" name=\"item\" value=\"shoes\">";
-                    echo "<input type=\"submit\" value=\"Add To Cart\" />";
+                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
                     echo "</form>";
                     echo "</td>";
                 
@@ -50,6 +50,15 @@ session_start();
                     echo "<td> Item: Glasses </td>";
                     echo "<td> Quantity: " . $glasses . "</td>";
                     echo "<td> price - " . 20 * $glasses . "</td>";
+                
+                    echo "<td>";
+                    echo "<form action=\"addItem.php\" method=\"get\">";
+                    echo "<input type=\"hidden\" name=\"item\" value=\"glasses\">";
+                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
+                    echo "</form>";
+                    echo "</td>";
+                
+                
                 echo "</tr>";
             }
         
@@ -58,6 +67,14 @@ session_start();
                     echo "<td> Item: Toothbrush </td>";
                     echo "<td> Quantity: " . $toothbrush . "</td>";
                     echo "<td> price - " . 30 * $toothbrush . "</td>";
+                
+                    echo "<td>";
+                    echo "<form action=\"addItem.php\" method=\"get\">";
+                    echo "<input type=\"hidden\" name=\"item\" value=\"toothbrush\">";
+                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
+                    echo "</form>";
+                    echo "</td>";
+                
                 echo "</tr>";
             }
         
@@ -66,6 +83,14 @@ session_start();
                     echo "<td> Item: Ramen </td>";
                     echo "<td> Quantity: " . $ramen . "</td>";
                     echo "<td> price - $" .  $ramen . ".00</td>";
+                
+                    echo "<td>";
+                    echo "<form action=\"addItem.php\" method=\"get\">";
+                    echo "<input type=\"hidden\" name=\"item\" value=\"ramen\">";
+                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
+                    echo "</form>";
+                    echo "</td>";
+                
                 echo "</tr>";
             }
         
