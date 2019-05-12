@@ -13,7 +13,7 @@ session_start();
     
 <?php
     // Set session variables
-    $_SESSION["item"] = array();
+    $_SESSION["item"] = array("one");
 ?>
 
     
