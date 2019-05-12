@@ -34,8 +34,8 @@ session_start();
         echo $_SESSION["shoes"] . "<br>";
         echo $_SESSION["toothbrush"] . "<br>";
         
-        header("home.php"); /* Redirect browser */
-exit();
+        header("./home.php"); /* Redirect browser */
+        exit();
         
     ?>
     </body>
