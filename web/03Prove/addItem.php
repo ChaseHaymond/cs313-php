@@ -18,7 +18,7 @@ session_start();
         echo "Favorite color is " . $_SESSION["item"] . ".<br>";
         
         
-        $message = echo $_SESSION['item'];
+        $message = "test";
 echo "<script type='text/javascript'>alert('$message');</script>";
         
         
