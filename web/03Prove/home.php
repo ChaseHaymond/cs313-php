@@ -11,9 +11,11 @@ session_start();
     
 <body>
     
+
 <?php
-    // Set session variables
-    $_SESSION["item"] = array("one");
+// Echo session variables that were set on previous page
+$_SESSION["glasses"] = 0;
+$_SESSION["ramen"] =0;
 ?>
 
     
