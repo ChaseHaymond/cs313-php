@@ -26,13 +26,6 @@ session_start();
                     echo "<td> Quantity: " . $shoes . "</td>";
                     echo "<td> - price - $" . 50 * $shoes . ".00</td>";
                 
-                    echo "<td>";
-                    echo "<form action=\"removeItem.php\" method=\"get\">";
-                    echo "<input type=\"hidden\" name=\"item\" value=\"shoes\">";
-                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
-                    echo "</form>";
-                    echo "</td>";
-                
                 
                 echo "</tr>";
             }
@@ -43,14 +36,7 @@ session_start();
                     echo "<td> Quantity: " . $glasses . "</td>";
                     echo "<td> - price - $" . 20 * $glasses . ".00</td>";
                 
-                    echo "<td>";
-                    echo "<form action=\"removeItem.php\" method=\"get\">";
-                    echo "<input type=\"hidden\" name=\"item\" value=\"glasses\">";
-                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
-                    echo "</form>";
-                    echo "</td>";
-                
-                
+                           
                 echo "</tr>";
             }
         
@@ -60,13 +46,6 @@ session_start();
                     echo "<td> Quantity: " . $toothbrush . "</td>";
                     echo "<td> - price - $" . 30 * $toothbrush . ".00</td>";
                 
-                    echo "<td>";
-                    echo "<form action=\"removeItem.php\" method=\"get\">";
-                    echo "<input type=\"hidden\" name=\"item\" value=\"toothbrush\">";
-                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
-                    echo "</form>";
-                    echo "</td>";
-                
                 echo "</tr>";
             }
         
@@ -75,14 +54,6 @@ session_start();
                     echo "<td> Item: Ramen </td>";
                     echo "<td> Quantity: " . $ramen . "</td>";
                     echo "<td> - price - $" .  $ramen . ".00</td>";
-                
-                    echo "<td>";
-                    echo "<form action=\"removeItem.php\" method=\"get\">";
-                    echo "<input type=\"hidden\" name=\"item\" value=\"ramen\">";
-                    echo "<input type=\"submit\" value=\"Remove From Cart\" />";
-                    echo "</form>";
-                    echo "</td>";
-                
                 echo "</tr>";
             }
         
@@ -100,7 +71,7 @@ session_start();
         }
         echo "<hr>";
         
-        echo "Will be delivered to " . $_GET['address'];
+        echo "Will be delivered to " . htmlspecialchars($_GET['name']);
     
     
         
