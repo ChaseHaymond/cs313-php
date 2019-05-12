@@ -6,7 +6,7 @@
     
 <body>
     <h1>Welcome to Chase's Store &nbsp; - 
-    <a id="pageLink" href="home.html"> Browse Items </a> 
+    <a id="pageLink" href="home.php"> Browse Items </a> 
         &nbsp;-&nbsp;
 	<a id="pageLink" href="cart.php"> View Cart </a> 
     </h1>
