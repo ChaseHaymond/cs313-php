@@ -32,7 +32,7 @@ session_start();
                 echo "<tr>";
                     echo "<td> Item: Shoes </td>";
                     echo "<td> Quantity: " . $shoes . "</td>";
-                    echo "<td> price - " . 20 * $shoes . "</td>;
+                    echo "<td> price - " . 20 * $shoes . "</td>";
                 echo "</tr>";
             }
         
