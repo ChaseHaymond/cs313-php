@@ -17,12 +17,10 @@ session_start();
     </h1>
     
     
-    <?php        
-//        echo "<h1> test </h1>";
-//        $test = "test2";
-//        echo $test;
-//    
-//        $test3 = 
+<?php        
+        echo $_GET['item'] . "<br>";    
+        
+        array_push($_SESSION['item'],$_GET['item']);
         
         print_r( $_SESSION['item']);
             

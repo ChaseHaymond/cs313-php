@@ -32,7 +32,7 @@ session_start();
           </tr>
          <tr>
              <td id="add">
-             <form action="addItem.php" method="get">
+             <form action="cart.php" method="get">
                     <input type="hidden" name="item" value="glasses">
                     <input type="submit" value="Add To Cart" />
              </form>
@@ -45,7 +45,7 @@ session_start();
           </tr>
           <tr>
              <td id="add">
-                <form action="addItem.php" method="get">
+                <form action="cart.php" method="get">
                     <input type="hidden" name="item" value="ramen">
                     <input type="submit" value="Add To Cart" />
                 </form>
@@ -58,7 +58,7 @@ session_start();
           </tr>
          <tr>
              <td id="add">
-             <form action="addItem.php" method="get">
+             <form action="cart.php" method="get">
                     <input type="hidden" name="item" value="shoes">
                     <input type="submit" value="Add To Cart" />
              </form>
@@ -71,7 +71,7 @@ session_start();
           </tr>
          <tr>
              <td id="add">
-             <form action="addItem.php" method="get">
+             <form action="cart.php" method="get">
                     <input type="hidden" name="item" value="toothbrush">
                     <input type="submit" value="Add To Cart" />
              </form>
