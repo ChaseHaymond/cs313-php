@@ -26,6 +26,17 @@ session_start();
             $ramen = $_SESSION["ramen"];
             $message = "S: " . $shoes . ", G: " . $glasses . ", T: " . $toothbrush . ", R: " . $ramen;
             echo "<script type='text/javascript'>alert('$message');</script>";
+        
+            echo "<table>"
+            if ($shoes > 0) {
+                echo "<tr>"
+                    echo "<td> Item: Shoes </td>";
+                    echo "<td> Quantity: " . $shoes . "</td>";
+                    echo "price - " . 20 * $shoes;
+                echo "</tr>"
+            }
+        
+            echo "</table>"
         ?>
 <!--
      <table>
