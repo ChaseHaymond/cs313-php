@@ -13,7 +13,7 @@
     
     
     <?php        
-        echo "<h1> test </h1>"
+        echo "<h1> test </h1>";
         echo $_GET['item'] . "<br>";    
         
         array_push($_SESSION['item'],$_GET['item']);
