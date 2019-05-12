@@ -60,10 +60,12 @@ session_start();
             <td id="price">$50.00</td>
           </tr>
          <tr>
+             <td id="add">
              <form action="addItem.php" method="get">
                     <input type="hidden" name="item" value="shoes">
                     <input type="submit" value="Add To Cart" />
              </form>
+             </td>
          </tr>
          <tr>
             <td id="picture"><img src="toothbrush.jpg" alt="toothbrush" height="100px"></td>
