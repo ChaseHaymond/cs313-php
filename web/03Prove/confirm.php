@@ -63,9 +63,9 @@ session_start();
             echo "</table>";
     
         echo "<hr>";
-        $total = $ramen + 30 * $toothbrush + 20 * $glasses + 50 * $shoes;
+        $total = $ramen + (30 * $toothbrush) + (20 * $glasses) + (50 * $shoes);
         if ($total > 0) {
-            echo "Total: $" . $ramen + 30 * $toothbrush + 20 * $glasses + 50 * $shoes . ".00";
+            echo "Total: $" . $total . ".00";
         } else {
             echo "Total: $0.00";
         }
