@@ -34,12 +34,12 @@ session_start();
                     echo "<td> Quantity: " . $shoes . "</td>";
                     echo "<td> price - " . 50 * $shoes . "</td>";
                 
-                    echo "<td>"
-                    echo "<form action=\"addItem.php\" method=\"get\">"
-                    echo "<input type=\"hidden\" name=\"item\" value=\"shoes\">"
-                    echo "<input type=\"submit\" value=\"Add To Cart\" />"
-                    echo "</form>"
-                    echo "</td>"
+                    echo "<td>";
+                    echo "<form action=\"addItem.php\" method=\"get\">";
+                    echo "<input type=\"hidden\" name=\"item\" value=\"shoes\">";
+                    echo "<input type=\"submit\" value=\"Add To Cart\" />";
+                    echo "</form>";
+                    echo "</td>";
                 
                 
                 echo "</tr>";
