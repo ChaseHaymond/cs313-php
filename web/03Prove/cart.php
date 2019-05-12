@@ -14,18 +14,24 @@
     
     <?php        
         echo "<h1> test </h1>";
-        echo $_GET['item'] . "<br>";    
-        
-        array_push($_SESSION['item'],$_GET['item']);
-        
-        print_r( $_SESSION['item']);
-            
-        echo "<br>";
-        
-        foreach($_SESSION['item'] as $x => $x_value) {
-            echo $x_value;
-            echo "<br>";
-        }
+        $test = "test2";
+        echo $test;
+    
+    
+    
+    
+//        echo $_GET['item'] . "<br>";    
+//        
+//        array_push($_SESSION['item'],$_GET['item']);
+//        
+//        print_r( $_SESSION['item']);
+//            
+//        echo "<br>";
+//        
+//        foreach($_SESSION['item'] as $x => $x_value) {
+//            echo $x_value;
+//            echo "<br>";
+//        }
     ?>
     
 <!--
