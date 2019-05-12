@@ -14,8 +14,8 @@ session_start();
         
         echo $_SESSION['item']; 
         
-        echo "Favorite color is " . $_SESSION["test"] . ".<br>";
-        echo "Favorite color is " . $_SESSION["item"] . ".<br>";
+        echo "Favorite local is " . $_SESSION["test"] . ".<br>";
+        echo "Favorite session is " . $_SESSION["item"] . ".<br>";
         
         
         $message = "test";
