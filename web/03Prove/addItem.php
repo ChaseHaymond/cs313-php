@@ -7,9 +7,6 @@ session_start();
     
     
     <?php        
-        
-        print_r( $_SESSION['item']);
-        
         echo $_GET['item'] . "<br>";    
         
         array_push($_SESSION['item'],$_GET['item']);

@@ -1,8 +1,3 @@
-<?php
-// Start the session
-session_start();
-?>
-
 <html>
 <head>
     <title>Chase's Store</title>
@@ -11,28 +6,11 @@ session_start();
     
 <body>
     <h1>Welcome to Chase's Store &nbsp; - 
-    <a id="pageLink" href="home.php"> Browse Items </a> 
+    <a id="pageLink" href="home.html"> Browse Items </a> 
         &nbsp;-&nbsp;
 	<a id="pageLink" href="cart.php"> View Cart </a> 
     </h1>
     
-    
-<?php        
-        echo $_GET['item'] . "<br>";    
-        
-        array_push($_SESSION['item'],$_GET['item']);
-        
-        print_r( $_SESSION['item']);
-            
-        echo "<br>";
-        
-        foreach($_SESSION['item'] as $x => $x_value) {
-            echo $x_value;
-            echo "<br>";
-        }
-    ?>
-    
-<!--
     <p id="content">
         Contents of your cart <br><br>
      <table>
@@ -53,7 +31,6 @@ session_start();
          
     </table> 
     </p>
--->
     
 </body>
 </html>
