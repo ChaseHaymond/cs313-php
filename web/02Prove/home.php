@@ -20,9 +20,9 @@
         
 	<hr> 
         
-	<a id="pageLink" href="home.php"> Home Page </a> 
+	<a id="pageLink" href=""> Home Page </a> 
         
-	<a id="pageLink" href="assignments.php"> Assignments Page </a> 
+	<a id="pageLink" href="../assignments.php"> Assignments Page </a> 
     
 	</h1>
     

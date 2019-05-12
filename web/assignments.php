@@ -11,8 +11,8 @@
     <h1>
         Welcome to Chase Haymond's Website 
         <hr> 
-        <a id="pageLink" href="home.php"> Home Page </a> 
-        <a id="pageLink" href="assignments.php"> Assignments Page </a>  
+        <a id="pageLink" href=".\02Prove\home.php"> Home Page </a> 
+        <a id="pageLink" href=""> Assignments Page </a>  
     </h1>
     <div id="center">
          <?php include 'title.php';?>
@@ -26,7 +26,7 @@
         </h2>
         
         <hr>
-        <li>To be announced</li>
+        <li><button onclick="location.href='.\03Prove\home.php">Prove 03: PHP Shopping Cart</button> </li>
     
     </div>
     <br>
