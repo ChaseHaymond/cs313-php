@@ -1,0 +1,24 @@
+CREATE TABLE users (
+	id int primary key,
+	name varchar(80)
+);
+
+CREATE TABLE books (
+	id int primary key,
+	name varchar(80),
+	author_id int references authors(id),
+	genre int
+);
+
+CREATE TABLE authors (
+	id int primary key,
+	firstName varchar(80),
+	lastName varchar(80)
+);
+
+CREATE TABLE history (
+	user_id int references users(id),
+	book_id int references books(id),
+	startDate date,
+	endDate date
+);
