@@ -12,7 +12,7 @@ include("dbconection.php");
         
         Search by: <br>
         <input type="radio" name="searchType" value="authors"> Authors Last Name<br>
-        <input type="radio" name="searchType" value="books"> Title<br>
+        <input type="radio" name="searchType" value="books" selected> Title<br>
         <br>
         
         
