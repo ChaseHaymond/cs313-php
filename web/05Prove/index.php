@@ -13,6 +13,9 @@ include("dbconection.php");
         <input type="submit" value="Search">
     </form>
     <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books</button>
+    
+    <br>
+    <br>
  
 <?php
 $name = $_GET['book'];          
