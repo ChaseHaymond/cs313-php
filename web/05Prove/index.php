@@ -22,20 +22,18 @@ $name = $_GET['book'];
 $query = "SELECT * 
             FROM books 
             WHERE LOWER(name)=" ."LOWER('" . $name ."')";
-foreach ($db->query($query) as $row) {
+foreach ($db->query('SELECT * FROM books') as $row) {
     echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
     echo '</p><br>';
 }
     
-if($_GET['showAll']){echo '2';
-    showAll();}
+if($_GET['showAll']){showAll();}
     
 function showAll() {
-    echo '1';
-//    foreach ($db->query('SELECT * FROM books') as $row) {
-//    echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
-//    echo '</p><br>';
-//    }
+    foreach ($db->query('SELECT * FROM books') as $row) {
+    echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
+    echo '</p><br>';
+    }
 }
 ?>
 </body>
