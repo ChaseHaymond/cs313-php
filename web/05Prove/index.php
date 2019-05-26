@@ -11,7 +11,7 @@ include("dbconection.php");
     <form action="" method="get">
         
         Search by: <br>
-        <input type="radio" name="searchType" value="authors" checked> Author<br>
+        <input type="radio" name="searchType" value="authors"> Author<br>
         <input type="radio" name="searchType" value="books"> Title<br>
         <input type="radio" name="searchType" value="history"> Date<br><br>
         
