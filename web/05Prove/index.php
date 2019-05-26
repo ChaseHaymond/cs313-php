@@ -11,7 +11,7 @@ include("dbconection.php");
     <form action="" method="get">
         
         Search by: <br>
-        <input type="radio" name="searchType" value="authors"> Author<br>
+        <input type="radio" name="searchType" value="authors"> Authors Last Name<br>
         <input type="radio" name="searchType" value="books"> Title<br>
         <input type="radio" name="searchType" value="history"> Date<br><br>
         
@@ -45,7 +45,25 @@ if($searchType == 'books'){
         
         echo '</p><br>';
     }
-}       
+}
+    
+if($searchType == 'authors'){
+    $query = "SELECT * FROM books AS b
+        JOIN authors AS a ON a.id = b.author_id
+        JOIN history AS h ON h.book_id = b.id
+        WHERE LOWER(lastname)=" ."LOWER('" . $search ."')";
+    
+    
+    foreach ($db->query($query) as $row) {
+        echo '<strong>Title: </strong> ' . $row['name'] . 
+             '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] .
+             '<strong>, Date Started: </strong> ' . $row['startdate'] .
+             '<strong>, Date Finished: </strong> ' . $row['enddate'] .
+             '&nbsp;';
+        
+        echo '</p><br>';
+    }
+}
     
     
     
