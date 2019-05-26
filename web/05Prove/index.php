@@ -37,7 +37,11 @@ if($searchType == 'books'){
     
     
     foreach ($db->query($query) as $row) {
-        echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
+        echo '<strong>Title: </strong> ' . $row['name'] . 
+             '<strong>, Author: </strong> ' . $row['firstName'] . " " . $row['lastName'] .
+             '<strong>, Date Started: </strong> ' . $row['starteDate'] .
+             '<strong>, Date Finished: </strong> ' . $row['endDate'] .
+             '&nbsp;';
         
         echo '</p><br>';
     }
@@ -46,6 +50,20 @@ if($searchType == 'books'){
     
     
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 if($_GET['showAll']){showAll();}
     
