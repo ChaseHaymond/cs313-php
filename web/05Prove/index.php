@@ -10,11 +10,14 @@ include("dbconection.php");
 <body >
     <form action="" method="get">
         
-        
-        Search: <input type="text" name="search"> Search by: <input type="radio" name="searchType" value="authors"> Authors Last Name <input type="radio" name="searchType" value="books"> Title<br>
-        
+        Search by: <br>
+        <input type="radio" name="searchType" value="authors"> Authors Last Name<br>
+        <input type="radio" name="searchType" value="books"> Title<br>
         <br>
         
+        
+        
+        Search: <input type="text" name="search"><br>
         <input type="submit" value="Search">
     </form>
     <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books</button>
