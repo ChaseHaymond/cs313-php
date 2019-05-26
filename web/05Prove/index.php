@@ -27,13 +27,15 @@ foreach ($db->query($query) as $row) {
     echo '</p><br>';
 }
     
-if($_GET['showAll']){showAll();}
+if($_GET['showAll']){echo '2';
+    showAll();}
     
 function showAll() {
-    foreach ($db->query('SELECT * FROM books') as $row) {
-    echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
-    echo '</p><br>';
-    }
+    echo '1';
+//    foreach ($db->query('SELECT * FROM books') as $row) {
+//    echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
+//    echo '</p><br>';
+//    }
 }
 ?>
 </body>
