@@ -30,15 +30,18 @@ $search = $_GET['search'];
 $searchType = $_GET['searchType'];
     
 if($searchType == 'books'){
-    $query = "SELECT * 
-            FROM books 
-            WHERE LOWER(name)=" ."LOWER('" . $search ."')";
-
+    $query = "SELECT * FROM books AS b
+        JOIN authors AS a ON a.id = b.author_id
+        JOIN history AS h ON h.book_id = b.id
+        WHERE LOWER(name)=" ."LOWER('" . $search ."')";
+    
+    
     foreach ($db->query($query) as $row) {
         echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
+        
         echo '</p><br>';
     }
-}    
+}       
     
     
     
@@ -47,7 +50,10 @@ if($searchType == 'books'){
 if($_GET['showAll']){showAll();}
     
 function showAll() {
-    foreach ($db->query('SELECT * FROM books') as $row) {
+    $query = "SELECT * 
+            FROM books 
+            WHERE LOWER(name)=" ."LOWER('" . $search ."')";
+    foreach ($db->query($query) as $row) {
         echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
         echo '</p><br>';
     }
