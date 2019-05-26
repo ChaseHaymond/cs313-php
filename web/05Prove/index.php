@@ -18,7 +18,7 @@ include("dbconection.php");
         
         
         Search: <input type="text" name="search"><br>
-        <input type="submit" value="Search" placeholder="Leave Blank To Show Full History">
+        <input type="submit" value="Search">
     </form>
     <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books</button>
     
@@ -29,7 +29,7 @@ include("dbconection.php");
 $search = $_GET['search']; 
 $searchType = $_GET['searchType'];
     
-if(!$_GET['search']){
+if($_GET['showAll']){
     $query = "SELECT * FROM books AS b
         JOIN authors AS a ON a.id = b.author_id
         JOIN history AS h ON h.book_id = b.id";
