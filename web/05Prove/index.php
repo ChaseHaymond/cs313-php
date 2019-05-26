@@ -8,13 +8,13 @@ include("dbconection.php");
   <title>Chase Haymond Prove05</title>
 </head>
 <body >
-    <form action="" method="post">
+    <form action="" method="get">
         Book: <input type="text" name="book"><br>
         <input type="submit" value="Search">
     </form>
  
 <?php
-$name = $_POST['book'];          
+$name = $_GET['book'];          
 $query = "SELECT * 
             FROM books 
             WHERE LOWER(name)=" ."LOWER('" . $name ."')";
