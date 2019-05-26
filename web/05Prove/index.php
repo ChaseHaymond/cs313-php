@@ -22,7 +22,7 @@ $name = $_GET['book'];
 $query = "SELECT * 
             FROM books 
             WHERE LOWER(name)=" ."LOWER('" . $name ."')";
-foreach ($db->query('SELECT * FROM books') as $row) {
+foreach ($db->query($query) as $row) {
     echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
     echo '</p><br>';
 }
