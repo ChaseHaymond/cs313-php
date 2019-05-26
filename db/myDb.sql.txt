@@ -1,24 +1,53 @@
+
 CREATE TABLE users (
-	id int primary key,
+	id serial primary key,
 	name varchar(80)
 );
 
-CREATE TABLE books (
-	id int primary key,
-	name varchar(80),
-	author_id int references authors(id),
-	genre int
-);
-
 CREATE TABLE authors (
-	id int primary key,
+	id serial primary key,
 	firstName varchar(80),
 	lastName varchar(80)
 );
 
+CREATE TABLE genres (
+	id serial primary key,
+	genre varchar(80)
+);
+
+CREATE TABLE books (
+	id serial primary key,
+	name varchar(80),
+	author_id int references authors(id),
+	genre int references genres(id)
+);
+
 CREATE TABLE history (
-	user_id int references users(id),
-	book_id int references books(id),
+	user_id serial references users(id),
+	book_id serial references books(id),
 	startDate date,
 	endDate date
 );
+
+INSERT INTO users (name)
+VALUES ('Chase');
+
+INSERT INTO authors (firstName, lastName)
+VALUES ('J.R.R', 'Tolkien');
+
+INSERT INTO genres (genre)
+VALUES ('Fantasy');
+
+INSERT INTO books (name, author_id, genre)
+VALUES ('The Hobbit', 1, 1), 
+('The Lord of the Rings: The Fellowship of the Ring', 1, 1), 
+('The Lord of the Rings: The Two Towers', 1, 1), 
+('The Lord of the Rings: The Return of the King', 1, 1);
+
+
+SELECT * FROM scriptures_table;
+
+
+SELECT * FROM authors AS a
+JOIN books AS b
+ON a.id = b.author_id;
