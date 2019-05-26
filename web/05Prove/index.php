@@ -13,12 +13,12 @@ include("dbconection.php");
         Search by: <br>
         <input type="radio" name="searchType" value="authors"> Authors Last Name<br>
         <input type="radio" name="searchType" value="books"> Title<br>
-        <input type="radio" name="searchType" value="history"> Date<br><br>
+        <br>
         
         
         
         Search: <input type="text" name="search"><br>
-        <input type="submit" value="Search">
+        <input type="submit" value="Search" placeholder="Leave Blank To Show Full History">
     </form>
     <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books</button>
     
@@ -29,7 +29,23 @@ include("dbconection.php");
 $search = $_GET['search']; 
 $searchType = $_GET['searchType'];
     
-if($searchType == 'books'){
+if(!$_GET['search']){
+    $query = "SELECT * FROM books AS b
+        JOIN authors AS a ON a.id = b.author_id
+        JOIN history AS h ON h.book_id = b.id";
+    
+    
+    foreach ($db->query($query) as $row) {
+        echo '<strong>Title: </strong> ' . $row['name'] . 
+             '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] .
+             '<strong>, Date Started: </strong> ' . $row['startdate'] .
+             '<strong>, Date Finished: </strong> ' . $row['enddate'] .
+             '&nbsp;';
+        
+        echo '</p><br>';
+    }
+    
+} else if($searchType == 'books'){
     $query = "SELECT * FROM books AS b
         JOIN authors AS a ON a.id = b.author_id
         JOIN history AS h ON h.book_id = b.id
@@ -45,9 +61,7 @@ if($searchType == 'books'){
         
         echo '</p><br>';
     }
-}
-    
-if($searchType == 'authors'){
+} else if($searchType == 'authors'){
     $query = "SELECT * FROM books AS b
         JOIN authors AS a ON a.id = b.author_id
         JOIN history AS h ON h.book_id = b.id
