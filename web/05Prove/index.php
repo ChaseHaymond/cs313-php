@@ -19,7 +19,7 @@ $query = "SELECT *
             FROM books 
             WHERE LOWER(name)=" ."LOWER('" . $name ."')";
 foreach ($db->query($query) as $row) {
-    echo '<strong>' . $row['book'] . '</strong>' . '&nbsp;';
+    echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
     echo '</p><br>';
 }
 ?>
