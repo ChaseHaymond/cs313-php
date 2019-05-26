@@ -10,10 +10,10 @@ include("dbconection.php");
 <body >
     <form action="" method="get">
         
-        Search by:
-        <input type="radio" name="search" value="author" checked> Author<br>
-        <input type="radio" name="search" value="title"> Title<br>
-        <input type="radio" name="search" value="date"> Date<br><br>
+        Search by: <br>
+        <input type="radio" name="searchType" value="authors" checked> Author<br>
+        <input type="radio" name="searchType" value="books"> Title<br>
+        <input type="radio" name="searchType" value="history"> Date<br><br>
         
         
         
@@ -26,14 +26,23 @@ include("dbconection.php");
     <br>
  
 <?php
-$search = $_GET['search'];          
-$query = "SELECT * 
+$search = $_GET['search']; 
+$searchType = $_GET['searchType'];
+    
+if($searchType == 'books'){
+    $query = "SELECT * 
             FROM books 
             WHERE LOWER(name)=" ."LOWER('" . $search ."')";
-foreach ($db->query($query) as $row) {
-    echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
-    echo '</p><br>';
-}
+
+    foreach ($db->query($query) as $row) {
+        echo '<strong>' . $row['name'] . '</strong>' . '&nbsp;';
+        echo '</p><br>';
+    }
+}    
+    
+    
+    
+
     
 if($_GET['showAll']){showAll();}
     
