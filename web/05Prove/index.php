@@ -20,7 +20,7 @@ include("dbconection.php");
         Search: <input type="text" name="search"><br>
         <input type="submit" value="Search">
     </form>
-    <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books</button>
+    <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books You Have Read</button>
     
     <br>
     <br>
