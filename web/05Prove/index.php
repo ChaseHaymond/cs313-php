@@ -38,9 +38,9 @@ if($searchType == 'books'){
     
     foreach ($db->query($query) as $row) {
         echo '<strong>Title: </strong> ' . $row['name'] . 
-             '<strong>, Author: </strong> ' . $row['firstName'] . " " . $row['lastName'] .
-             '<strong>, Date Started: </strong> ' . $row['starteDate'] .
-             '<strong>, Date Finished: </strong> ' . $row['endDate'] .
+             '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] .
+             '<strong>, Date Started: </strong> ' . $row['startedate'] .
+             '<strong>, Date Finished: </strong> ' . $row['enddate'] .
              '&nbsp;';
         
         echo '</p><br>';
