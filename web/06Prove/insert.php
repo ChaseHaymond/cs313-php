@@ -30,8 +30,10 @@ Author: <input type="text" name="author" list="authors" />
         
 Genre:  <select name="genre">
         
+        <option value=""></option>
+        
         <?php
-
+        
         foreach ($db->query("SELECT * FROM genres") as $row) {
             $name = $row['genre'];
             echo '<option value="' . $name . '">' . $name . '</option>';
