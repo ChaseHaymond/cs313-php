@@ -34,13 +34,6 @@ include("dbconection.php");
         }
     }
     
-    if(authorId == 0) {
-        $db = get_db();
-    
-        $stmt = $db->prepare('INSERT INTO authore(firstName) VALUES(' . $author . ');');
-        $stmt->exicute();
-    }
-    
 
     
     echo "HERE";
