@@ -9,12 +9,12 @@ include("dbconection.php");
 </head>
 <body >
     <strong>Insert a new book</strong><br><br>
-    <form action="./insertBook.php" method="get">
+    <form action="./insertBook.php" method="posrt">
         
 Title: <input type="text" name="title"><br>
         
         
-Author: <input type="text" list="authors" />
+Author: <input type="text" name="author" list="authors" />
         <datalist id="authors">
             <?php
 
@@ -28,7 +28,7 @@ Author: <input type="text" list="authors" />
         
         
         
-Genre:  <select>
+Genre:  <select name="genre">
         
         <?php
 
@@ -42,8 +42,8 @@ Genre:  <select>
         </select><br>
         
         
-Start Date: <input type="date" size="60" name="date" id="date"/><br>
-End Date: <input type="date" size="60" name="date" id="date"/><br>
+Start Date: <input type="date" size="60" name="sdate" id="date"/><br>
+End Date: <input type="date" size="60" name="edate" id="date"/><br>
         
         <input type="submit" value="Add">
         
