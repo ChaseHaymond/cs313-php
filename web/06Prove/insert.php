@@ -25,8 +25,6 @@ Author: <input type="text" list="authors" />
             ?>     
         </datalist><br>
         
-
-        <input type="submit" value="Add">
         
         
 Genre:  <select>
@@ -45,7 +43,8 @@ Genre:  <select>
 
         <input type="submit" value="Add">
         
-Date: <input type="date" size="60" name="date" id="date"/>
+Start Date: <input type="date" size="60" name="date" id="date"/><br>
+End Date: <input type="date" size="60" name="date" id="date"/><br>
         
     </form>
  
