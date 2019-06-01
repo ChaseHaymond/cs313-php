@@ -14,16 +14,17 @@ include("dbconection.php");
         Title: <input type="text" name="title"><br>
         
         
-        <select name="cars">         
-        <?php
-        
-            foreach ($db->query("SELECT * FROM authors") as $row) {
-                $name = $row['firstname'] . " " . $row['lastname'];
-                echo '<option value="' . $name . '">' . $name . '</option>';
-            }
-                
-        ?>     
-        </select> 
+        Author: <input type="text" list="cars" />
+        <datalist id="cars">
+            <?php
+
+                foreach ($db->query("SELECT * FROM authors") as $row) {
+                    $name = $row['firstname'] . " " . $row['lastname'];
+                    echo '<option>' . $name . '</option>';
+                }
+
+            ?>     
+        </datalist><br>
         
         
         <input type="submit" value="Add">
