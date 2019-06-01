@@ -8,14 +8,13 @@ include("dbconection.php");
   <title>Chase Haymond Prove06</title>
 </head>
 <body >
-   instert
     <form action="" method="get">
         
-        Title: <input type="text" name="title"><br>
+Title: <input type="text" name="title"><br>
         
         
-        Author: <input type="text" list="cars" />
-        <datalist id="cars">
+Author: <input type="text" list="authors" />
+        <datalist id="authors">
             <?php
 
                 foreach ($db->query("SELECT * FROM authors") as $row) {
@@ -26,9 +25,28 @@ include("dbconection.php");
             ?>     
         </datalist><br>
         
+
+        <input type="submit" value="Add">
         
+        
+Genre:  <select>
+        
+        <?php
+
+        foreach ($db->query("SELECT * FROM genres") as $row) {
+            $name = $row['genre'];
+            echo '<option value="'$name'">'$name'</option>';
+        }
+
+        ?> 
+        
+        </select><br>
+        
+
         <input type="submit" value="Add">
     </form>
+    
+    
  
 <?php
 $search = $_GET['search']; 
