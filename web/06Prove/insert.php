@@ -44,9 +44,10 @@ Genre:  <select>
         
 
         <input type="submit" value="Add">
+        
+Date: <input type="date" size="60" name="date" id="date"/>
+        
     </form>
-    
-    
  
 <?php
 $search = $_GET['search']; 
