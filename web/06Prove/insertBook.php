@@ -48,6 +48,8 @@ include("dbconection.php");
     $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
     $stmt->exicute();
     
+    echo "HERE";
+    
     $newPage = "index.php";
     header("Location: $newPage");
     die();
