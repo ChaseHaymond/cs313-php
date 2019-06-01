@@ -27,8 +27,18 @@ include("dbconection.php");
         }
     }
     
+    foreach ($db->query('SELECT * FROM genres') as $row) {
+        $dbName = $row['genre']
+        if(strtoupper($dbName) == strtoupper($genre)) {
+            $genreId = $row['id'];
+        }
+    }
+    
+    
+    
     echo "HERE";
-
+    
+    
 ?>
 </body>
 </html>
