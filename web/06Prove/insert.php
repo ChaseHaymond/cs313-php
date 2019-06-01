@@ -35,7 +35,7 @@ Genre:  <select>
 
         foreach ($db->query("SELECT * FROM genres") as $row) {
             $name = $row['genre'];
-            echo '<option value="'$name'">'$name'</option>';
+            echo '<option value="' . $name . '">' . $name . '</option>';
         }
 
         ?> 
