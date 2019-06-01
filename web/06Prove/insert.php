@@ -9,8 +9,25 @@ include("dbconection.php");
 </head>
 <body >
    instert
-    <br>
-    <br>
+    <form action="" method="get">
+        
+        Title: <input type="text" name="title"><br>
+        
+        
+        <select name="cars">         
+        <?php
+        
+            foreach ($db->query("SELECT * FROM authors") as $row) {
+                $name = $row['firstname'] . " " . $row['lastname'];
+                echo '<option value="' . $name . '">' . $name . '</option>';
+            }
+                
+        ?>     
+        </select> 
+        
+        
+        <input type="submit" value="Add">
+    </form>
  
 <?php
 $search = $_GET['search']; 
