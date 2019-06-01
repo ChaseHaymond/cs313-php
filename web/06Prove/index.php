@@ -8,7 +8,7 @@ include("dbconection.php");
   <title>Chase Haymond Prove06</title>
 </head>
 <body >
-    <button id="button" name="button" onClick='../insert.php"'>Click Here To Add A New Book</button>
+    <button id="button" name="button" onClick='location.href="../insert.php"'>Click Here To Add A New Book</button>
     <form action="" method="get">
         
         Search by: <br>
