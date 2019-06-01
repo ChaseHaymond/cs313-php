@@ -27,34 +27,7 @@ include("dbconection.php");
         }
     }
     
-    foreach ($db->query('SELECT * FROM genres') as $row) {
-        $dbName = $row['genre']
-        if(strtoupper($dbName) == strtoupper($genre)) {
-            $genreId = $row['id'];
-        }
-    }
-    
-    if(authorId == 0) {
-        $db = get_db();
-    
-        $stmt = $db->prepare('INSERT INTO authore(firstName) VALUES(' . $author . ');');
-        $stmt->exicute();
-    }
-    
-    $authorId = $pdo->lastInsertId('authors_id_seq');
-    
-    $db = get_db();
-    
-    $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
-    $stmt->exicute();
-    
-    echo "HERE";
-    
-    $newPage = "index.php";
-    header("Location: $newPage");
-    die();
-    
-    
+
 ?>
 </body>
 </html>
