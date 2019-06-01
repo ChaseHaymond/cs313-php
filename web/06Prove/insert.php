@@ -40,11 +40,11 @@ Genre:  <select>
         
         </select><br>
         
-
-        <input type="submit" value="Add">
         
 Start Date: <input type="date" size="60" name="date" id="date"/><br>
 End Date: <input type="date" size="60" name="date" id="date"/><br>
+        
+        <input type="submit" value="Add">
         
     </form>
  
