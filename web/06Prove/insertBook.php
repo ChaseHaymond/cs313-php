@@ -27,6 +27,7 @@ include("dbconection.php");
         }
     }
     
+    echo "HERE";
 
 ?>
 </body>
