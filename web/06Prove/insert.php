@@ -8,6 +8,7 @@ include("dbconection.php");
   <title>Chase Haymond Prove06</title>
 </head>
 <body >
+    <strong>Insert a new book</strong><br><br>
     <form action="" method="get">
         
 Title: <input type="text" name="title"><br>
