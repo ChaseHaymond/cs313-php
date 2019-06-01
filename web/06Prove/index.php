@@ -5,9 +5,10 @@ include("dbconection.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chase Haymond Prove05</title>
+  <title>Chase Haymond Prove06</title>
 </head>
 <body >
+    <button id="button" name="button" onClick='../insert.php"'>Click Here To Add A New Book</button>
     <form action="" method="get">
         
         Search by: <br>
@@ -78,25 +79,7 @@ if($_GET['showAll']){
         echo '</p><br>';
     }
 }
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+        
 if($_GET['showAll']){showAll();}
     
 function showAll() {
