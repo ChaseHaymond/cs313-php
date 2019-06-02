@@ -63,7 +63,7 @@ include("dbconection.php");
     $newSdate = date('Y-m-d', strtotime($sdate));
     $newEdate = date('Y-m-d', strtotime($edate));
     
-    echo 'ns - ' . newSdate . ', ne - ' . newEdate;
+    echo 'ns - ' . $newSdate . ', ne - ' . $newEdate;
     
     $query = 'INSERT INTO history (user_id, book_id, startDate, endDate) VALUES (:user_id, :book_id, :startDate, :endDate)';
     $stmt = $db->prepare($query);
