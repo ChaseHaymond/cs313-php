@@ -34,6 +34,8 @@ include("dbconection.php");
         }
     }
     
+    echo $authorId;
+    
     if($authorId == 0) {
         $db = get_db();
         
