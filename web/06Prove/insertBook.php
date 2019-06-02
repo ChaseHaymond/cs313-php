@@ -37,26 +37,22 @@ include("dbconection.php");
     
     
     if($authorId == 0) {
-        echo $authorId;
         //$db = get_db();
         
         $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
-        echo $authorId;
         $stmt = $db->prepare($query);
-        echo $authorId;
         $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
-        echo $authorId;
-        $stmt->execute();
-        echo $authorId;
+        //$stmt->execute();
     }
-    
+    echo $authorId;
     $authorId = $pdo->lastInsertId('authors_id_seq');
-    
+    echo $authorId;
     $db = get_db();
-    
+    echo $authorId;
     $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
+    echo $authorId;
     $stmt->execute();
-    
+    echo $authorId;
     echo "HERE";
     
     $newPage = "./index.php";
