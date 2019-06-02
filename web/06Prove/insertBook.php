@@ -46,22 +46,22 @@ include("dbconection.php");
         echo $authorId;
         $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
         echo $authorId;
-        $stmt->exicute();
+        $stmt->execute();
         echo $authorId;
     }
-//    
-//    $authorId = $pdo->lastInsertId('authors_id_seq');
-//    
-//    $db = get_db();
-//    
-//    $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
-//    $stmt->exicute();
-//    
-//    echo "HERE";
-//    
-//    $newPage = "./index.php";
-//    header("Location: $newPage");
-//    die();
+    
+    $authorId = $pdo->lastInsertId('authors_id_seq');
+    
+    $db = get_db();
+    
+    $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
+    $stmt->exicute();
+    
+    echo "HERE";
+    
+    $newPage = "./index.php";
+    header("Location: $newPage");
+    die();
     
     echo "HERE";
     
