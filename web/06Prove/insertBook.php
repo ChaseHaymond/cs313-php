@@ -41,12 +41,13 @@ include("dbconection.php");
         //$db = get_db();
         
         $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
-    
+        echo $authorId;
         $stmt = $db->prepare($query);
-        
-        $stmt->bindValue(':firstName', "author", PDO::PARAM_STR);
-        
+        echo $authorId;
+        $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
+        echo $authorId;
         $stmt->exicute();
+        echo $authorId;
     }
 //    
 //    $authorId = $pdo->lastInsertId('authors_id_seq');
