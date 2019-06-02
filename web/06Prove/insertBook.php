@@ -46,13 +46,13 @@ include("dbconection.php");
     }
     echo $authorId;
     $authorId = $db->lastInsertId('authors_id_seq');
-    echo $authorId;
+    echo '1';
     $db = get_db();
-    echo $authorId;
+    echo '2';
     $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
-    echo $authorId;
+    echo '3';
     $stmt->execute();
-    echo $authorId;
+    echo '4';
     echo "HERE";
     
     $newPage = "./index.php";
