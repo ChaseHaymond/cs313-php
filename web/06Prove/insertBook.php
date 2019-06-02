@@ -77,7 +77,7 @@ include("dbconection.php");
     $stmt->execute();
     
     $newPage = "./index.php";
-    //header("Location: $newPage");
+    header("Location: $newPage");
     die();
 
     
