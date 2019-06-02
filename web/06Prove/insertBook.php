@@ -46,12 +46,9 @@ include("dbconection.php");
     }
     echo $authorId;
     $authorId = $db->lastInsertId('authors_id_seq');
-    echo '1';
-    //$db = get_db();
-    echo '2';
+
     $query = 'INSERT INTO books (name, author_id, genre) VALUES (:name, :authorId, :genre)';
     $stmt = $db->prepare($query);
-    echo '3';
     
     $stmt->bindValue(':name', $title, PDO::PARAM_STR);
     $stmt->bindValue(':authorId', $authorId, PDO::PARAM_INT);
@@ -59,14 +56,30 @@ include("dbconection.php");
                          
                          
     $stmt->execute();
-    echo '4';
-    echo "HERE";
+    
+    $userId = 1;
+    $bookId = $db->lastInsertId('books_id_seq');
+    
+    $newSdate = date('Y-m-d', strtotime($sdate));
+    $newEdate = date('Y-m-d', strtotime($edate));
+    
+    echo 'ns - ' . newSdate . ', ne - ' . newEdate;
+    
+    $query = 'INSERT INTO history (user_id, book_id, startDate, endDate) VALUES (:user_id, :book_id, :startDate, :endDate)';
+    $stmt = $db->prepare($query);
+    
+    $stmt->bindValue(':user_id', $userId, PDO::PARAM_STR);
+    $stmt->bindValue(':book_id', $bookId, PDO::PARAM_INT);
+    $stmt->bindValue(':startDate', $newSdate, PDO::PARAM_STR);
+    $stmt->bindValue(':endDate', $newEdate, PDO::PARAM_STR);
+                         
+                         
+    $stmt->execute();
     
     $newPage = "./index.php";
-    header("Location: $newPage");
+    //header("Location: $newPage");
     die();
-    
-    echo "HERE";
+
     
     
 ?>
