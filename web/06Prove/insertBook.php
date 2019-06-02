@@ -46,7 +46,7 @@ include("dbconection.php");
     }
     echo $authorId;
     $authorId = $db->lastInsertId('authors_id_seq');
-    echo 'n: '. $authorId;
+    echo 'n: ' . $authorId;
     //$db = get_db();
     echo '2';
     $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES (:name, :author_id, :genre)';
