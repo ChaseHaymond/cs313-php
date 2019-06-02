@@ -56,9 +56,9 @@ include("dbconection.php");
     $stmt->bindValue(':name', $title, PDO::PARAM_STR);
     $stmt->bindValue(':author_id', $authorId, PDO::PARAM_INT);
     $stmt->bindValue(':genre', $genreId, PDO::PARAM_INT);
-//                         
-//                         
-//    $stmt->execute();
+                         
+                         
+    $stmt->execute();
     echo '4';
     echo "HERE";
     
