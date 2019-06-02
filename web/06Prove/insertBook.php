@@ -34,10 +34,11 @@ include("dbconection.php");
         }
     }
     
-    echo $authorId;
     
-    //if($authorId == 0) {
-        $db = get_db();
+    
+    if($authorId == 0) {
+        echo $authorId;
+        //$db = get_db();
         
         $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
     
@@ -46,7 +47,7 @@ include("dbconection.php");
         $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
         
         $stmt->exicute();
-    //}
+    }
 //    
 //    $authorId = $pdo->lastInsertId('authors_id_seq');
 //    
