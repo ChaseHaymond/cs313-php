@@ -49,7 +49,7 @@ include("dbconection.php");
     echo '1';
     //$db = get_db();
     echo '2';
-    $query = 'INSERT INTO books (name, author, genre) VALUES (:name, :author_id, :genre)';
+    $query = 'INSERT INTO books (name, author_id, genre) VALUES (:name, :authorId, :genre)';
     $stmt = $db->prepare($query);
     echo '3';
     
