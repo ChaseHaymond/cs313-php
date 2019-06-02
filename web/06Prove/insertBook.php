@@ -36,10 +36,12 @@ include("dbconection.php");
     
     if($authorId == 0) {
         $db = get_db();
-    
-        $stmt = $db->prepare('INSERT INTO authors(firstName) VALUES (:name);');
         
-        $stmt->bindValue(':name', $author, PDO::PARAM_STR);
+        $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
+    
+        $stmt = $db->prepare($query);
+        
+        $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
         
         $stmt->exicute();
     }
