@@ -45,7 +45,7 @@ include("dbconection.php");
         //$stmt->execute();
     }
     echo $authorId;
-    $authorId = $pdo->lastInsertId('authors_id_seq');
+    $authorId = $pdo->lastInsertId('authors_id');
     echo $authorId;
     $db = get_db();
     echo $authorId;
