@@ -55,7 +55,7 @@ include("dbconection.php");
     $db = get_db();
     
     $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
-    $stmt->exicute();
+    $stmt->execute();
     
     echo "HERE";
     
