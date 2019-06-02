@@ -34,14 +34,25 @@ include("dbconection.php");
         }
     }
     
-    if($authorId == 0) {
-        $db = get_db();
-    
-        $stmt = $db->prepare('INSERT INTO authors(firstName) VALUES(' . $author . ');');
-        $stmt->exicute();
-    }
-    
-
+//    if($authorId == 0) {
+//        $db = get_db();
+//    
+//        $stmt = $db->prepare('INSERT INTO authors(firstName) VALUES(' . $author . ');');
+//        $stmt->exicute();
+//    }
+//    
+//    $authorId = $pdo->lastInsertId('authors_id_seq');
+//    
+//    $db = get_db();
+//    
+//    $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES(' . $title . ', ' . $authorId . ', ' . $genreId . ');');
+//    $stmt->exicute();
+//    
+//    echo "HERE";
+//    
+//    $newPage = "./index.php";
+//    header("Location: $newPage");
+//    die();
     
     echo "HERE";
     
