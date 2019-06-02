@@ -49,15 +49,16 @@ include("dbconection.php");
     echo '1';
     //$db = get_db();
     echo '2';
-    $stmt = $db->prepare('INSERT INTO books(name, author, genre) VALUES (:name, :author_id, :genre)');
+    $query = 'INSERT INTO books (name, author, genre) VALUES (:name, :author_id, :genre)';
+    $stmt = $db->prepare($query);
     echo '3';
     
-    $stmt->bindValue(':name', $title, PDO::PARAM_STR);
-    $stmt->bindValue(':author_id', $authorId, PDO::PARAM_INT);
-    $stmt->bindValue(':genre', $genreId, PDO::PARAM_INT);
-                         
-                         
-    $stmt->execute();
+//    $stmt->bindValue(':name', $title, PDO::PARAM_STR);
+//    $stmt->bindValue(':author_id', $authorId, PDO::PARAM_INT);
+//    $stmt->bindValue(':genre', $genreId, PDO::PARAM_INT);
+//                         
+//                         
+//    $stmt->execute();
     echo '4';
     echo "HERE";
     
