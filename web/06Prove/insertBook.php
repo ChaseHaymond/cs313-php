@@ -44,7 +44,7 @@ include("dbconection.php");
     
         $stmt = $db->prepare($query);
         
-        $stmt->bindValue(':firstName', "$author", PDO::PARAM_STR);
+        $stmt->bindValue(':firstName', "author", PDO::PARAM_STR);
         
         $stmt->exicute();
     }
