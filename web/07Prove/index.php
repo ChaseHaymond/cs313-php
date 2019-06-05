@@ -12,14 +12,12 @@ include("dbconection.php");
     
     
         <h1>Welcome to Your Reading History <br>
-        <a id="pageLink" href="home.php"> Search Your History </a> 
+        <a id="pageLink" href="./index.php"> Search Your History </a> 
         &nbsp;-&nbsp;
-        <a id="pageLink" href="cart.php"> Add New Boook </a> 
+        <a id="pageLink" href="./insert.php"> Add New Boook </a> 
         </h1>
     
     
-    
-    <button id="button" name="button" onClick='location.href="./insert.php"'>Click Here To Add A New Book</button>
     <form action="" method="get">
         
         Search by: <br>
