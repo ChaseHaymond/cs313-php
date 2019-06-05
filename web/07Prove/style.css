@@ -16,9 +16,8 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: whitesmoke;
 }
-tr:first-child {
-    border-width: thick;
-}
+
+
 
 body {
     background-color: #379683; 
