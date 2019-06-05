@@ -36,15 +36,29 @@ if($_GET['showAll']){
         JOIN history AS h ON h.book_id = b.id";
     
     
+    
+    echo '<table style="width:100%">';
+    echo '<tr>';
+    echo '<th>Title</th>';
+    echo '<th>Author</th>';
+    echo '<th>Start Date</th>';
+    echo '<th>End Date</th>';
+    echo '</tr>';
+    
+    
     foreach ($db->query($query) as $row) {
-        echo '<strong>Title: </strong> ' . $row['name'] . 
-             '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] .
-             '<strong>, Date Started: </strong> ' . $row['startdate'] .
-             '<strong>, Date Finished: </strong> ' . $row['enddate'] .
+        echo '<tr>';
+        echo '<td>' . '<strong>Title: </strong> ' . $row['name'] . '</td>' .
+             '<td>' . '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
+             '<td>' . '<strong>, Date Started: </strong> ' . $row['startdate'] . '</td>' .
+             '<td>' . '<strong>, Date Finished: </strong> ' . $row['enddate'] . '</td>' .
              '&nbsp;';
         
         echo '</p><br>';
+        echo '</tr>';
     }
+    
+    echo '</table>';
     
 } else if($searchType == 'books'){
     $query = "SELECT * FROM books AS b
