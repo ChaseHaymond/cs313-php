@@ -67,7 +67,7 @@ if($_GET['showAll']){
         WHERE LOWER(name)=" ."LOWER('" . $search ."')";
     
     
-    echo '<table>';
+        echo '<table>';
     echo '<tr>';
     echo '<th>Title</th>';
     echo '<th>Author</th>';
@@ -75,15 +75,15 @@ if($_GET['showAll']){
     echo '<th>End Date</th>';
     echo '</tr>';
     
+    
     foreach ($db->query($query) as $row) {
-        
         echo '<tr>';
         
         echo '<td>' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
              '<td>' . $row['enddate'] . '</td>';
-        
+
         echo '</tr>';
     }
     
