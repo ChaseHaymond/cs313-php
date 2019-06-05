@@ -17,6 +17,10 @@ tr:nth-child(odd) {
     background-color: whitesmoke;
 }
 
+#title {
+    width: 50%;
+}
+
 
 
 body {

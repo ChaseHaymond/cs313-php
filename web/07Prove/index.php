@@ -40,7 +40,7 @@ if($_GET['showAll']){
     
     echo '<table>';
     echo '<tr>';
-    echo '<th>Title</th>';
+    echo '<th id="title">Title</th>';
     echo '<th>Author</th>';
     echo '<th>Start Date</th>';
     echo '<th>End Date</th>';
@@ -50,7 +50,7 @@ if($_GET['showAll']){
     foreach ($db->query($query) as $row) {
         echo '<tr>';
         
-        echo '<td>' . $row['name'] . '</td>' .
+        echo '<td id="title">' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
              '<td>' . $row['enddate'] . '</td>';
@@ -69,7 +69,7 @@ if($_GET['showAll']){
     
         echo '<table>';
     echo '<tr>';
-    echo '<th>Title</th>';
+    echo '<th id="title">Title</th>';
     echo '<th>Author</th>';
     echo '<th>Start Date</th>';
     echo '<th>End Date</th>';
@@ -107,7 +107,7 @@ if($_GET['showAll']){
         
         echo '<tr>';
         
-        echo '<td>' . $row['name'] . '</td>' .
+        echo '<td id="title">' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
              '<td>' . $row['enddate'] . '</td>';
