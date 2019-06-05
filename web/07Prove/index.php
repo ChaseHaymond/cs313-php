@@ -48,13 +48,12 @@ if($_GET['showAll']){
     
     foreach ($db->query($query) as $row) {
         echo '<tr>';
-        echo '<td>' . '<strong>Title: </strong> ' . $row['name'] . '</td>' .
-             '<td>' . '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
-             '<td>' . '<strong>, Date Started: </strong> ' . $row['startdate'] . '</td>' .
-             '<td>' . '<strong>, Date Finished: </strong> ' . $row['enddate'] . '</td>' .
-             '&nbsp;';
         
-        echo '</p><br>';
+        echo '<td>' . $row['name'] . '</td>' .
+             '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
+             '<td>' . $row['startdate'] . '</td>' .
+             '<td>' . $row['enddate'] . '</td>';
+
         echo '</tr>';
     }
     
