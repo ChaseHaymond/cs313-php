@@ -5,7 +5,8 @@ include("dbconection.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chase Haymond Prove06</title>
+    <title>Chase Haymond Prove06</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body >
     <button id="button" name="button" onClick='location.href="./insert.php"'>Click Here To Add A New Book</button>
@@ -37,7 +38,7 @@ if($_GET['showAll']){
     
     
     
-    echo '<table style="width:100%">';
+    echo '<table>';
     echo '<tr>';
     echo '<th>Title</th>';
     echo '<th>Author</th>';
