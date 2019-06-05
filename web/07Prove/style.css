@@ -1,5 +1,4 @@
 table {
-/*    border-collapse: collapse;*/
     border-color: black;
     width: 100%;
 }
@@ -12,4 +11,9 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+
+body {
+    background-color: #379683; 
 }
