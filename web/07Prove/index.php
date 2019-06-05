@@ -79,9 +79,9 @@ if($_GET['showAll']){
         
         echo '<tr>';
         
-        echo '<td>' . '<strong>Title: </strong> ' . $row['name'] . '<td>'
-             '<td>' . '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] . '<td>'
-             '<td>' . '<strong>, Date Started: </strong> ' . $row['startdate'] . '<td>'
+        echo '<td>' . '<strong>Title: </strong> ' . $row['name'] . '<td>' .
+             '<td>' . '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] . '<td>' .
+             '<td>' . '<strong>, Date Started: </strong> ' . $row['startdate'] . '<td>' .
              '<td>' . '<strong>, Date Finished: </strong> ' . $row['enddate'] . '<td>';
         
         echo '</tr>';
@@ -107,9 +107,9 @@ if($_GET['showAll']){
         
         echo '<tr>';
         
-        echo '<td>' . '<strong>Title: </strong> ' . $row['name'] . '<td>'
-             '<td>' . '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] . '<td>'
-             '<td>' . '<strong>, Date Started: </strong> ' . $row['startdate'] . '<td>'
+        echo '<td>' . '<strong>Title: </strong> ' . $row['name'] . '<td>' .
+             '<td>' . '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] . '<td>' .
+             '<td>' . '<strong>, Date Started: </strong> ' . $row['startdate'] . '<td>' .
              '<td>' . '<strong>, Date Finished: </strong> ' . $row['enddate'] . '<td>';
         
         echo '</tr>';
