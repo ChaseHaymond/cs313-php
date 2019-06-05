@@ -11,7 +11,7 @@ include("dbconection.php");
 <body >
     
     
-        <h1>Welcome to Chase's Store &nbsp; - 
+        <h1>Welcome to Your Reading History <br> &nbsp; - 
         <a id="pageLink" href="home.php"> Browse Items </a> 
         &nbsp;-&nbsp;
         <a id="pageLink" href="cart.php"> View Cart </a> 
