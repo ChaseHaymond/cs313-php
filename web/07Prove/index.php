@@ -5,10 +5,20 @@ include("dbconection.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Chase Haymond Prove06</title>
+    <title>Chase Haymond Prove07</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
+    
+    
+        <h1>Welcome to Chase's Store &nbsp; - 
+        <a id="pageLink" href="home.php"> Browse Items </a> 
+        &nbsp;-&nbsp;
+        <a id="pageLink" href="cart.php"> View Cart </a> 
+        </h1>
+    
+    
+    
     <button id="button" name="button" onClick='location.href="./insert.php"'>Click Here To Add A New Book</button>
     <form action="" method="get">
         
