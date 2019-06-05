@@ -1,4 +1,6 @@
 
+heroku pg:psql
+
 CREATE TABLE users (
 	id serial primary key,
 	name varchar(80)
@@ -37,6 +39,19 @@ VALUES ('J.R.R', 'Tolkien');
 
 INSERT INTO genres (genre)
 VALUES ('Fantasy');
+
+INSERT INTO genres (genre)
+VALUES ('Science Fiction'),
+('Western'),
+('Romance'),
+('Thriller'),
+('Mystery'),
+('Dystopia'),
+('Biography'),
+('Play'),
+('Satire'),
+('Young adult'),
+('Children');
 
 INSERT INTO books (name, author_id, genre)
 VALUES ('The Hobbit', 1, 1), 
