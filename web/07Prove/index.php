@@ -31,32 +31,20 @@ $search = $_GET['search'];
 $searchType = $_GET['searchType'];
     
 if($_GET['showAll']){
-    
-    echo '<table style="width:100%">';
-    echo '<tr>';
-    echo '<th>Title</th>';
-    echo '<th>Author</th>';
-    echo '<th>Start Date</th>';
-    echo '<th>End Date</th>';
-    echo '</tr>';
-    
-    
     $query = "SELECT * FROM books AS b
         JOIN authors AS a ON a.id = b.author_id
         JOIN history AS h ON h.book_id = b.id";
     
     
     foreach ($db->query($query) as $row) {
-        echo '<tr>';
-        echo '<td><strong>Title: </strong> ' . $row['name'] . '</td>' .
-             '<td><strong>, Author: </strong> ' . $row['firstName'] . " " . $row['lastName'] . '</td>' .
-             '<td><strong>, Date Started: </strong> ' . $row['starteDate'] . '</td>' .
-             '<td><strong>, Date Finished: </strong> ' . $row['endDate'] . '</td>' .
+        echo '<strong>Title: </strong> ' . $row['name'] . 
+             '<strong>, Author: </strong> ' . $row['firstname'] . " " . $row['lastname'] .
+             '<strong>, Date Started: </strong> ' . $row['startdate'] .
+             '<strong>, Date Finished: </strong> ' . $row['enddate'] .
              '&nbsp;';
+        
         echo '</p><br>';
-        echo '</tr>';
     }
-    echo '</table>';
     
 } else if($searchType == 'books'){
     $query = "SELECT * FROM books AS b
