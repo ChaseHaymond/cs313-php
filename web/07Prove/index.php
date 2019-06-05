@@ -11,10 +11,10 @@ include("dbconection.php");
 <body >
     
     
-        <h1>Welcome to Your Reading History <br> &nbsp; - 
-        <a id="pageLink" href="home.php"> Browse Items </a> 
+        <h1>Welcome to Your Reading History <br>
+        <a id="pageLink" href="home.php"> Search Your History </a> 
         &nbsp;-&nbsp;
-        <a id="pageLink" href="cart.php"> View Cart </a> 
+        <a id="pageLink" href="cart.php"> Add New Boook </a> 
         </h1>
     
     
