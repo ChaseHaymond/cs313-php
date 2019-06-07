@@ -65,7 +65,7 @@ include("dbconection.php");
         echo 'Start Date: <input type="date" size="60" name="sdate" id="date" value=' . $row['startdate'] . '/><br>';
         echo 'Start Date: <input type="date" size="60" name="sdate" id="date" value=' . $row['enddate'] . '/><br>';
         
-        <input type="submit" value="Add">
+        echo '<br><input type="submit" value="Add">';
         
         
 //        echo '<td>' . $row['name'] . '</td>' .
