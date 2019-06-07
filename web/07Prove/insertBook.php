@@ -61,7 +61,10 @@ include("dbconection.php");
     $bookId = $db->lastInsertId('books_id_seq');
     
     $newSdate = date('Y-m-d', strtotime($sdate));
-    $newEdate = date('Y-m-d', strtotime($edate));
+    
+    if($_GET['edate']){
+        $newEdate = date('Y-m-d', strtotime($edate));
+    }
     
     echo 'ns - ' . $newSdate . ', ne - ' . $newEdate;
     
