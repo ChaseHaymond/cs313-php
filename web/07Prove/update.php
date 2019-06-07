@@ -31,7 +31,19 @@ include("dbconection.php");
     $query = "SELECT * FROM books AS b
         JOIN authors AS a ON a.id = b.author_id
         JOIN history AS h ON h.book_id = b.id
-        WHERE LOWER(history_id)=" ."LOWER('" . $_GET['id']  . "')";
+        WHERE history_id=" . $_GET['id'];
+    
+    
+    
+    
+    SELECT * FROM books AS b
+        JOIN authors AS a ON a.id = b.author_id
+        JOIN history AS h ON h.book_id = b.id
+        WHERE LOWER(history_id)=LOWER(1);
+    
+    
+    
+    
     
     
     echo '<table>';
