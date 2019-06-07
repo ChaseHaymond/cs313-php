@@ -40,12 +40,27 @@ include("dbconection.php");
         
         echo 'Title: <input type="text" name="title" value="' . $row['name'] . '"><br>';
         
-        Author First Name: <input type="text" name="fname" value= $row['firstname'] /><br>
-        Author Last Name: <input type="text" name="lname" value= $row['lastname'] /><br>
+        echo 'Author First Name: <input type="text" name="fname" value=' . $row['firstname'] . '/><br>';
+        echo 'Author Last Name: <input type="text" name="f=lname" value=' . $row['lastname'] . '/><br>';
+                       
             
+        echo 'Genre:  <select name="genre">';
+        echo '<option value=""></option>';
+        
+        
+        foreach ($db->query("SELECT * FROM genres") as $rowTwo) {
+            $name = $rowTwo['genre'];
             
+            if ($rowTwo['genre'] = $row['genre']) {
+                echo '<option value="' . $name . '" selected>' . $name . '</option>';
+            } else {
+                echo '<option value="' . $name . '">' . $name . '</option>';
+            }
+           
+        }
 
         
+        echo "</select><br>";
         
         
 //        echo '<td>' . $row['name'] . '</td>' .
