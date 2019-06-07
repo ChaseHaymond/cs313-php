@@ -31,7 +31,7 @@ include("dbconection.php");
         <input type="submit" value="Search">
     </form>
     <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books You Have Read</button>
-    <button id="button" name="button" onClick="location.href="./insert.php"">Edit</button>
+    <button id="button" name="button" onClick='location.href="./insert.php"'>Edit</button>
     <br>
     <br>
  
@@ -62,7 +62,7 @@ if($_GET['showAll']){
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
              '<td>' . $row['enddate'] . '</td>' .
-             '<td>' . '<button id="button" name="button" onClick="location.href="./insert.php"">Edit</button>' . '</td>';
+             '<td>' . '<button id="button" name="button" onClick=\'location.href="./insert.php"\'>Edit</button>' . '</td>';
 
         echo '</tr>';
     }
