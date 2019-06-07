@@ -61,12 +61,15 @@ if($_GET['showAll']){
         echo '<td id="title">' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
-             '<td>' . $row['enddate'] . '</td>';
+             '<td>' . $row['enddate'] . '</td>' .
+             '<td>' . '<button id="button" name="button" onClick='location.href="./insert.php"'>Edit</button>' . '</td>';
 
         echo '</tr>';
     }
     
     echo '</table>';
+    
+    
     
 } else if($searchType == 'books'){
     $query = "SELECT * FROM books AS b
