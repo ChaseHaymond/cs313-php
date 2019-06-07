@@ -9,7 +9,7 @@ include("dbconection.php");
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
-    
+    <h1> HI SADIE </h1>
     
         <h1>Welcome to Your Reading History <br>
         <a id="pageLink" href="./index.php"> Search Your History</a> 
