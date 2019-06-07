@@ -31,7 +31,6 @@ include("dbconection.php");
         <input type="submit" value="Search">
     </form>
     <button id="button" name="button" onClick='location.href="?showAll=1"'>Show All Books You Have Read</button>
-    <button id="button" name="button" onClick='location.href="./insert.php"'>Edit</button>
     <br>
     <br>
  
