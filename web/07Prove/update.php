@@ -48,7 +48,6 @@ include("dbconection.php");
         Genre:  <select name="genre">
         <option value=""></option>
         
-        <?php
         
         foreach ($db->query("SELECT * FROM genres") as $rowTeo) {
             $name = $rowTwo['genre'];
@@ -61,9 +60,8 @@ include("dbconection.php");
            
         }
 
-        ?> 
         
-        </select><br>
+        echo "</select><br>";
         
         
 //        echo '<td>' . $row['name'] . '</td>' .
