@@ -40,8 +40,8 @@ include("dbconection.php");
         
         echo 'Title: <input type="text" name="title" value="' . $row['name'] . '"><br>';
         
-        echo 'Author First Name: <input type="text" name="fname" value=' . $row['firstname'] . '/><br>';
-        echo 'Author Last Name: <input type="text" name="f=lname" value=' . $row['lastname'] . '/><br>';
+        echo 'Author First Name: <input type="text" name="fname" value=' . $row['firstname'] . '><br>';
+        echo 'Author Last Name: <input type="text" name="f=lname" value=' . $row['lastname'] . '><br>';
                        
             
         echo 'Genre:  <select name="genre">';
