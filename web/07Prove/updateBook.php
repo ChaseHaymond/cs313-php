@@ -46,11 +46,6 @@ include("dbconection.php");
     
     
     foreach ($db->query($query) as $row) {
-        $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
-        $stmt = $db->prepare($query);
-        $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
-        $stmt->execute();
-        
         
         $query = 'UPDATE authors SET firstname = ' . $fName . ',  lastname = ' . $lName . 'WHERE author_id = ' . $row['author_id']; 
         $stmt = $db->prepare($query);
@@ -63,9 +58,6 @@ include("dbconection.php");
 //        WHERE CustomerID = 1;
     }
     
-    
-    
-    echo 'ns - ' . $newSdate . ', ne - ' . $newEdate;
     
     
     $newPage = "./index.php";
