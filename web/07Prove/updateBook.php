@@ -22,19 +22,19 @@ include("dbconection.php");
     $authorId = 0;
     $genreId = 0;
     
-    foreach ($db->query('SELECT * FROM authors') as $row) {
-        $dbName = $row['firstname'] . " " . $row['lastname'];
-        if(strtoupper($dbName) == strtoupper($fname . $lname)) {
-            $authorId = $row['id'];
-        }
-    }
-    
-    foreach ($db->query('SELECT * FROM genres') as $row) {
-        $dbName = $row['genre'];
-        if(strtoupper($dbName) == strtoupper($genre)) {
-            $genreId = $row['id'];
-        }
-    }
+//    foreach ($db->query('SELECT * FROM authors') as $row) {
+//        $dbName = $row['firstname'] . " " . $row['lastname'];
+//        if(strtoupper($dbName) == strtoupper($fname . $lname)) {
+//            $authorId = $row['id'];
+//        }
+//    }
+//    
+//    foreach ($db->query('SELECT * FROM genres') as $row) {
+//        $dbName = $row['genre'];
+//        if(strtoupper($dbName) == strtoupper($genre)) {
+//            $genreId = $row['id'];
+//        }
+//    }
     
     
     
