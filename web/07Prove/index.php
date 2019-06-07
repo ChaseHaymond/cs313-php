@@ -62,7 +62,7 @@ if($_GET['showAll']){
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
              '<td>' . $row['enddate'] . '</td>' .
-             '<td>' . '<button id="button" name="button" onClick='location.href="./insert.php"'>Edit</button>' . '</td>';
+             '<td>' . '<button id="button" name="button" onClick="location.href="./insert.php"">Edit</button>' . '</td>';
 
         echo '</tr>';
     }
