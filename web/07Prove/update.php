@@ -33,29 +33,23 @@ include("dbconection.php");
         JOIN history AS h ON h.book_id = b.id
         WHERE history_id=" . $_GET['id'];
     
-    
-    echo '<table>';
-    echo '<tr>';
-    echo '<th id="title">Title</th>';
-    echo '<th>Author</th>';
-    echo '<th>Start Date</th>';
-    echo '<th>End Date</th>';
-    echo '</tr>';
 
+    echo '<form action="" method="get">';
     
     foreach ($db->query($query) as $row) {
-        echo '<tr>';
         
-        echo '<td>' . $row['name'] . '</td>' .
-             '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
-             '<td>' . $row['startdate'] . '</td>' .
-             '<td>' . $row['enddate'] . '</td>' .
-             '<td>' . '<button id="button" name="button" onClick=\'location.href="./update.php?id=' . $row['history_id'] . '"\'>Edit</button>' . '</td>';
+        echo 'Title: <input type="text" name="title" value="' . $row['name'] . '"><br>';
+        
+//        echo '<td>' . $row['name'] . '</td>' .
+//             '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
+//             '<td>' . $row['startdate'] . '</td>' .
+//             '<td>' . $row['enddate'] . '</td>' .
+//             '</td>';
 
-        echo '</tr>';
     }
     
-    echo '</table>';
+    
+    echo '</form>';
     
     ?>
     
