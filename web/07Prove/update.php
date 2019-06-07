@@ -62,6 +62,9 @@ include("dbconection.php");
         
         echo "</select><br>";
         
+        echo 'sdate ' . $row['startdate'] .
+             'edate '$row['enddate'];
+        
         echo 'Start Date: <input type="date" size="60" name="sdate" id="date" value=' . $row['startdate'] . '/><br>';
         echo 'Start Date: <input type="date" size="60" name="sdate" id="date" value=' . $row['enddate'] . '/><br>';
         
