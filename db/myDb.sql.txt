@@ -25,6 +25,7 @@ CREATE TABLE books (
 );
 
 CREATE TABLE history (
+	history_id serial,
 	user_id serial references users(id),
 	book_id serial references books(id),
 	startDate date,
@@ -59,7 +60,7 @@ VALUES ('The Hobbit', 1, 1),
 ('The Lord of the Rings: The Two Towers', 1, 1), 
 ('The Lord of the Rings: The Return of the King', 1, 1);
 
-INSERY INTO history (user_id, book_id, startDate, endDate)
+INSERT INTO history (user_id, book_id, startDate, endDate)
 VALUES (1, 1, '2013-06-15', '2013-07-05');
 
 
