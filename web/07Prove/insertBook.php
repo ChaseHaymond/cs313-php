@@ -61,27 +61,46 @@ include("dbconection.php");
     $bookId = $db->lastInsertId('books_id_seq');
     
     $newSdate = date('Y-m-d', strtotime($sdate));
+    $newEdate = date('Y-m-d', strtotime($edate));
     
     if($_GET['edate']){
-        $newEdate = date('Y-m-d', strtotime($edate));
+        $query = 'INSERT INTO history (user_id, book_id, startDate) VALUES (:user_id, :book_id, :startDate)';
+        $stmt = $db->prepare($query);
+
+        $stmt->bindValue(':user_id', $userId, PDO::PARAM_STR);
+        $stmt->bindValue(':book_id', $bookId, PDO::PARAM_INT);
+        $stmt->bindValue(':startDate', $newSdate, PDO::PARAM_STR);
+
+        $stmt->execute();
+    } else {
+        $query = 'INSERT INTO history (user_id, book_id, startDate, endDate) VALUES (:user_id, :book_id, :startDate, :endDate)';
+        $stmt = $db->prepare($query);
+
+        $stmt->bindValue(':user_id', $userId, PDO::PARAM_STR);
+        $stmt->bindValue(':book_id', $bookId, PDO::PARAM_INT);
+        $stmt->bindValue(':startDate', $newSdate, PDO::PARAM_STR);
+        $stmt->bindValue(':endDate', $newEdate, PDO::PARAM_STR);
+
+
+        $stmt->execute();
     }
     
     echo 'ns - ' . $newSdate . ', ne - ' . $newEdate;
     
-    $query = 'INSERT INTO history (user_id, book_id, startDate, endDate) VALUES (:user_id, :book_id, :startDate, :endDate)';
-    $stmt = $db->prepare($query);
+//    $query = 'INSERT INTO history (user_id, book_id, startDate, endDate) VALUES (:user_id, :book_id, :startDate, :endDate)';
+//    $stmt = $db->prepare($query);
+//    
+//    $stmt->bindValue(':user_id', $userId, PDO::PARAM_STR);
+//    $stmt->bindValue(':book_id', $bookId, PDO::PARAM_INT);
+//    $stmt->bindValue(':startDate', $newSdate, PDO::PARAM_STR);
+//    $stmt->bindValue(':endDate', $newEdate, PDO::PARAM_STR);
+//                         
+//                         
+//    $stmt->execute();
     
-    $stmt->bindValue(':user_id', $userId, PDO::PARAM_STR);
-    $stmt->bindValue(':book_id', $bookId, PDO::PARAM_INT);
-    $stmt->bindValue(':startDate', $newSdate, PDO::PARAM_STR);
-    $stmt->bindValue(':endDate', $newEdate, PDO::PARAM_STR);
-                         
-                         
-    $stmt->execute();
-    
-    //$newPage = "./index.php";
-    //header("Location: $newPage");
-    //die();
+    $newPage = "./index.php";
+    header("Location: $newPage");
+    die();
 
     
     
