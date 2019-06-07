@@ -12,9 +12,9 @@ include("dbconection.php");
     
     
         <h1>Welcome to Your Reading History <br>
-        <a id="pageLink" href="./index.php"> Search Your History </a> 
+        <a id="pageLink" href="./index.php"> Search Your History</a> 
         &nbsp;-&nbsp;
-        <a id="pageLink" href="./insert.php"> Add New Boook </a> 
+        <a id="pageLink" href="./insert.php"> Add New Boook</a> 
         </h1>
     
     
