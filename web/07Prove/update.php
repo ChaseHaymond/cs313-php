@@ -5,7 +5,7 @@ include("dbconection.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chase Haymond Prove06</title>
+  <title>Chase Haymond Prove07</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
@@ -34,14 +34,14 @@ include("dbconection.php");
         WHERE history_id=" . $_GET['id'];
     
 
-    echo '<form action="" method="get">';
+    echo '<form action="./updateBook.php" method="get">';
     
     foreach ($db->query($query) as $row) {
         
         echo 'Title: <input type="text" name="title" value="' . $row['name'] . '"><br>';
         
         echo 'Author First Name: <input type="text" name="fname" value=' . $row['firstname'] . '><br>';
-        echo 'Author Last Name: <input type="text" name="f=lname" value=' . $row['lastname'] . '><br>';
+        echo 'Author Last Name: <input type="text" name="lname" value=' . $row['lastname'] . '><br>';
                        
             
         echo 'Genre:  <select name="genre">';
@@ -62,20 +62,11 @@ include("dbconection.php");
         
         echo "</select><br>";
         
-        echo 'sdate ' . $row['startdate'] .
-             'edate ' . $row['enddate'];
-        
         echo 'Start Date: <input type="date" size="60" name="sdate" id="date" value="' . $row['startdate'] . '"/><br>';
-        echo 'Start Date: <input type="date" size="60" name="sdate" id="date" value="' . $row['enddate'] . '"/><br>';
+        echo 'End Date: <input type="date" size="60" name="edate" id="date" value="' . $row['enddate'] . '"/><br>';
         
         echo '<br><input type="submit" value="Add">';
         
-        
-//        echo '<td>' . $row['name'] . '</td>' .
-//             '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
-//             '<td>' . $row['startdate'] . '</td>' .
-//             '<td>' . $row['enddate'] . '</td>' .
-//             '</td>';
 
     }
     

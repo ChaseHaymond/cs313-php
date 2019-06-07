@@ -5,7 +5,7 @@ include("dbconection.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chase Haymond Prove06</title>
+  <title>Chase Haymond Prove07</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body >
@@ -19,7 +19,7 @@ include("dbconection.php");
     
     
     <strong>Insert a new book</strong><br><br>
-    <form action="./insertBook.php" method="posrt">
+    <form action="./insertBook.php" method="post">
         
 Title: <input type="text" name="title"><br>
         
