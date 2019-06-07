@@ -49,7 +49,7 @@ include("dbconection.php");
         <option value=""></option>
         
         
-        foreach ($db->query("SELECT * FROM genres") as $rowTeo) {
+        foreach ($db->query("SELECT * FROM genres") as $rowTwo) {
             $name = $rowTwo['genre'];
             
             if ($rowTwo['genre'] = $row['genre']) {
