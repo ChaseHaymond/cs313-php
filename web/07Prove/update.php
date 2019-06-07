@@ -44,24 +44,8 @@ include("dbconection.php");
         Author Last Name: <input type="text" name="lname" value= $row['lastname'] /><br>
             
             
-            
-        Genre:  <select name="genre">
-        <option value=""></option>
-        
-        
-        foreach ($db->query("SELECT * FROM genres") as $rowTwo) {
-            $name = $rowTwo['genre'];
-            
-            if ($rowTwo['genre'] = $row['genre']) {
-                echo '<option value="' . $name . '" selected>' . $name . '</option>';
-            } else {
-                echo '<option value="' . $name . '">' . $name . '</option>';
-            }
-           
-        }
 
         
-        echo "</select><br>";
         
         
 //        echo '<td>' . $row['name'] . '</td>' .
