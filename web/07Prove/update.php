@@ -51,7 +51,7 @@ include("dbconection.php");
         foreach ($db->query("SELECT * FROM genres") as $rowTwo) {
             $name = $rowTwo['genre'];
             
-            if ($rowTwo['genre'] = $row['genre']) {
+            if ($rowTwo['genre'] == $row['genre']) {
                 echo '<option value="' . $name . '" selected>' . $name . '</option>';
             } else {
                 echo '<option value="' . $name . '">' . $name . '</option>';
