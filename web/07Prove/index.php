@@ -23,9 +23,7 @@ include("dbconection.php");
         Search by: <br>
         <input type="radio" name="searchType" value="authors"> Authors Last Name<br>
         <input type="radio" name="searchType" value="books" selected> Title<br>
-        <br>
-        
-        
+        <br>        
         
         Search: <input type="text" name="search"><br>
         <input type="submit" value="Search">
@@ -92,7 +90,8 @@ if($_GET['showAll']){
         echo '<td>' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
-             '<td>' . $row['enddate'] . '</td>';
+             '<td>' . $row['enddate'] . '</td>' .
+             '<td>' . '<button id="button" name="button" onClick=\'location.href="./insert.php"\'>Edit</button>' . '</td>';
 
         echo '</tr>';
     }
@@ -120,7 +119,8 @@ if($_GET['showAll']){
         echo '<td id="title">' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
-             '<td>' . $row['enddate'] . '</td>';
+             '<td>' . $row['enddate'] . '</td>' .
+             '<td>' . '<button id="button" name="button" onClick=\'location.href="./insert.php?id=' . $row['id'] . '"\'>Edit</button>' . '</td>';
         
         echo '</tr>';
     }
