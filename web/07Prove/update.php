@@ -11,7 +11,7 @@ include("dbconection.php");
 <body >
     
     
-            <h1>Welcome to Your Reading History <br>
+        <h1>Welcome to Your Reading History <br>
         <a id="pageLink" href="./index.php"> Search Your History </a> 
         &nbsp;-&nbsp;
         <a id="pageLink" href="./insert.php"> Add New Boook </a> 
@@ -26,10 +26,12 @@ include("dbconection.php");
     
     
     <?php
+    $id = $_GET['id'];
+    
     $query = "SELECT * FROM books AS b
         JOIN authors AS a ON a.id = b.author_id
         JOIN history AS h ON h.book_id = b.id
-        WHERE LOWER(history_id)=" ."LOWER('" . $_GET['id'];  ."')";
+        WHERE LOWER(history_id)=" ."LOWER('" . $_GET['id']  . "')";
     
     
     echo '<table>';
