@@ -47,7 +47,7 @@ include("dbconection.php");
     
     foreach ($db->query($query) as $row) {
         
-        $query = 'UPDATE authors SET firstname = "' . $fName . '",  lastname = "' . $lName . '" WHERE author_id = ' . $row['author_id'];
+        $query = 'UPDATE authors SET firstName = "' . $fName . '",  lastName = "' . $lName . '" WHERE author_id = ' . $row['author_id'];
         echo $query;
         $stmt = $db->prepare($query);
         //$stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
