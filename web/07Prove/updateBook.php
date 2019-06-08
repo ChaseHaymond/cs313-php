@@ -64,7 +64,7 @@ include("dbconection.php");
         
         //$query = 'UPDATE authors SET fName=':fName', lName=:'lName' WHERE author_id=:author_id';
         //$statement = $db->prepare("select Employee_ID from REPT_Employee where Employee_ID=:empid"); 
-        $stmt = db->prepare("UPDATE authors SET fName=':fName', lName=:'lName' WHERE author_id=:author_id");
+        $stmt = db->prepare("UPDATE authors SET fName= (:fName), lName=:(lName) WHERE author_id=(:author_id)");
         //$statement->bindParam(":empid",$empid);
         $stmt->bindParam(":fName",$fName,PDO::PARAM_STR);
         $stmt->bindParam(":lName",$lName,PDO::PARAM_STR);
