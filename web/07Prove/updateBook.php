@@ -57,9 +57,9 @@ include("dbconection.php");
         
         $aId = $row['author_id'];
         echo "1";
-        $statement = $db->query("UPDATE authors SET firstName=$fName, lastName=$lName WHERE author_id=$aId");
+        $statement = $db->query("UPDATE ");//authors SET firstName=$fName, lastName=$lName WHERE author_id=$aId");
         echo "2";
-        $statement->execute();
+        //$statement->execute();
         echo "3";
         
 //        //$statement = $db->prepare("select Employee_ID from REPT_Employee where Employee_ID=:empid"); 
