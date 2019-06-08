@@ -62,15 +62,22 @@ include("dbconection.php");
 //        //$statement->execute();
 //        echo "3";
         
-        //$query = 'UPDATE authors SET fName=':fName', lName=:'lName' WHERE author_id=:author_id';
-        //$statement = $db->prepare("select Employee_ID from REPT_Employee where Employee_ID=:empid"); 
-        $stmt = db->prepare("UPDATE authors SET fName= (:fName), lName=:(lName) WHERE author_id=(:author_id)");
-        //$statement->bindParam(":empid",$empid);
-        $stmt->bindParam(":fName",$fName,PDO::PARAM_STR);
-        $stmt->bindParam(":lName",$lName,PDO::PARAM_STR);
-        $stmt->bindParam(":author_id",$row['author_id'],PDO::PARAM_INT);
-        //$statement->execute();
-        $stmt->execute();
+//        //$query = 'UPDATE authors SET fName=':fName', lName=:'lName' WHERE author_id=:author_id';
+//        //$statement = $db->prepare("select Employee_ID from REPT_Employee where Employee_ID=:empid"); 
+//        $stmt = db->prepare("UPDATE authors SET fName= (:fName), lName=:(lName) WHERE author_id=(:author_id)");
+//        //$statement->bindParam(":empid",$empid);
+//        $stmt->bindParam(":fName",$fName,PDO::PARAM_STR);
+//        $stmt->bindParam(":lName",$lName,PDO::PARAM_STR);
+//        $stmt->bindParam(":author_id",$row['author_id'],PDO::PARAM_INT);
+//        //$statement->execute();
+//        $stmt->execute();
+        
+        
+        
+        //$sql = "UPDATE users SET name=?, surname=?, sex=? WHERE id=?";
+        $sql = "UPDATE authors SET fName=?, lName=:? WHERE author_id=?"
+        $stmt= $dpo->prepare($sql);
+        $stmt->execute([$fName, $lName, $sex, $row['author_id']]);
         
         
 //        $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
