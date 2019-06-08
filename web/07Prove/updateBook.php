@@ -49,7 +49,7 @@ include("dbconection.php");
         
         $query = 'UPDATE authors SET firstName = "' . $fName . '",  lastName = "' . $lName . '" WHERE author_id = ' . $row['author_id'];
         echo $query;
-        $stmt = $db->prepare($query);
+        $stmt = $db->query($query);
         echo "1";
         //$stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
         $stmt->execute();
