@@ -42,7 +42,7 @@ include("dbconection.php");
     $query = "SELECT * FROM books AS b
         JOIN authors AS a ON a.id = b.author_id
         JOIN history AS h ON h.book_id = b.id
-        WHERE history_id=" . $_GET['id'];
+        WHERE history_id=1";// . $_GET['id'];
     
     
     foreach ($db->query($query) as $row) {
