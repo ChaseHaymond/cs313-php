@@ -47,13 +47,23 @@ include("dbconection.php");
     
     foreach ($db->query($query) as $row) {
         
-        $query = 'UPDATE authors SET firstName = "' . $fName . '",  lastName = "' . $lName . '" WHERE author_id = ' . $row['author_id'];
-        echo $query;
-        $stmt = $db->query($query);
-        echo "1";
-        //$stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
+//        $query = 'UPDATE authors SET firstName = "' . $fName . '",  lastName = "' . $lName . '" WHERE author_id = ' . $row['author_id'];
+//        echo $query;
+//        $stmt = $db->query($query);
+//        echo "1";
+//        //$stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
+//        $stmt->execute();
+//        echo "2";
+        
+        
+        //$statement = $db->prepare("select Employee_ID from REPT_Employee where Employee_ID=:empid"); 
+        $stmt = db->prepare("UPDATE authors SET fName=':fName', lName=:'lName' WHERE author_id=:author_id");
+        //$statement->bindParam(":empid",$empid);
+        $stmt->bindParam(":fName",$fName);
+        $stmt->bindParam(":lName",$lName);
+        $stmt->bindParam(":author_id",$row['author_id']);
+        //$statement->execute();
         $stmt->execute();
-        echo "2";
         
         
 //        UPDATE Customers
