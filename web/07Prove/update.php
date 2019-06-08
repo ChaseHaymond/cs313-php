@@ -37,7 +37,8 @@ include("dbconection.php");
     echo '<form action="./updateBook.php" method="get">';
     
     foreach ($db->query($query) as $row) {
-        
+    
+        echo ' <input type="hidden" id="histId" name="histId" value="' . $id . '">';
         echo 'Title: <input type="text" name="title" value="' . $row['name'] . '"><br>';
         
         echo 'Author First Name: <input type="text" name="fname" value=' . $row['firstname'] . '><br>';
