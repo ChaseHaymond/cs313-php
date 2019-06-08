@@ -45,19 +45,20 @@ include("dbconection.php");
         WHERE history_id=" . $_GET['id'];
     
     
-//    foreach ($db->query($query) as $row) {
-//        
-//        $query = 'UPDATE authors SET firstname = ' . $fName . ',  lastname = ' . $lName . 'WHERE author_id = ' . $row['author_id']; 
-//        $stmt = $db->prepare($query);
-//        //$stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
-//        $stmt->execute();
-//        
-//        
-////        UPDATE Customers
-////        SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
-////        WHERE CustomerID = 1;
-//    }
-//    
+    foreach ($db->query($query) as $row) {
+        
+        $query = 'UPDATE authors SET firstname = "' . $fName . '",  lastname = "' . $lName . '" WHERE author_id = ' . $row['author_id'];
+        echo $query;
+        $stmt = $db->prepare($query);
+        //$stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
+        $stmt->execute();
+        
+        
+//        UPDATE Customers
+//        SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+//        WHERE CustomerID = 1;
+    }
+    
     
     
     $newPage = "./index.php";
