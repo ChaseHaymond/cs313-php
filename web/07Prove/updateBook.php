@@ -50,8 +50,10 @@ include("dbconection.php");
         $query = 'UPDATE authors SET firstName = "' . $fName . '",  lastName = "' . $lName . '" WHERE author_id = ' . $row['author_id'];
         echo $query;
         $stmt = $db->prepare($query);
+        echo "1";
         //$stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
         $stmt->execute();
+        echo "2";
         
         
 //        UPDATE Customers
@@ -59,9 +61,10 @@ include("dbconection.php");
 //        WHERE CustomerID = 1;
     }
     
-    
+    echo "3";
     
     $newPage = "./index.php";
+    echo "4";
     header("Location: $newPage");
     die();
 
