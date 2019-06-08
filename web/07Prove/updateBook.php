@@ -55,15 +55,19 @@ include("dbconection.php");
 //        $stmt->execute();
 //        echo "2";
         
+        $aId = $row['author_id'];
+        $statement = $db->query("UPDATE authors SET firstName=$fName,  lastName=$lName WHERE author_id=$aId");
+        $statement->execute();
         
-        //$statement = $db->prepare("select Employee_ID from REPT_Employee where Employee_ID=:empid"); 
-        $stmt = db->prepare("UPDATE authors SET fName=':fName', lName=:'lName' WHERE author_id=:author_id");
-        //$statement->bindParam(":empid",$empid);
-        $stmt->bindParam(":fName",$fName);
-        $stmt->bindParam(":lName",$lName);
-        $stmt->bindParam(":author_id",$row['author_id']);
-        //$statement->execute();
-        $stmt->execute();
+        
+//        //$statement = $db->prepare("select Employee_ID from REPT_Employee where Employee_ID=:empid"); 
+//        $stmt = db->prepare("UPDATE authors SET fName=':fName', lName=:'lName' WHERE author_id=:author_id");
+//        //$statement->bindParam(":empid",$empid);
+//        $stmt->bindParam(":fName",$fName);
+//        $stmt->bindParam(":lName",$lName);
+//        $stmt->bindParam(":author_id",$row['author_id']);
+//        //$statement->execute();
+//        $stmt->execute();
         
         
 //        UPDATE Customers
