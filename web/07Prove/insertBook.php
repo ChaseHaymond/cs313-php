@@ -51,25 +51,29 @@ include("dbconection.php");
         $stmt->bindValue(':lastName', $authorLname, PDO::PARAM_STR);
         $stmt->execute();
     }
-    echo '0';
+echo '0';
     $authorId = $db->lastInsertId('authors_id_seq');
-
+echo '01';
     $query = 'INSERT INTO books (name, author_id, genre) VALUES (:name, :authorId, :genre)';
+echo '02';
     $stmt = $db->prepare($query);
-    
+echo '03';
     $stmt->bindValue(':name', $title, PDO::PARAM_STR);
+echo '04';
     $stmt->bindValue(':authorId', $authorId, PDO::PARAM_INT);
+echo '05';
     $stmt->bindValue(':genre', $genreId, PDO::PARAM_INT);
-                         
+echo '06';
                          
     $stmt->execute();
-    
+echo '07';
     $userId = 1;
     $bookId = $db->lastInsertId('books_id_seq');
-    
+echo '08';
     $newSdate = date('Y-m-d', strtotime($sdate));
+echo '09';
     $newEdate = date('Y-m-d', strtotime($edate));
-    echo '1';
+echo '1';
     if(!$_GET['edate']){
         echo '2';
         
