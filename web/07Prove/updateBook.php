@@ -77,7 +77,7 @@ include("dbconection.php");
         //$sql = "UPDATE users SET name=?, surname=?, sex=? WHERE id=?";
         $sql = "UPDATE authors SET fName=?, lName=:? WHERE author_id=?";
         echo "1";
-        $dpo->prepare($sql)->execute([$fName, $lName, $sex, $row['author_id']]);
+        $dpo->prepare($sql)->execute([$fName, $lName, $row['author_id']]);
         
 //        $stmt= $dpo->prepare($sql);
 //        echo "2";
