@@ -24,18 +24,29 @@ include("dbconection.php");
 Title: <input type="text" name="title"><br>
         
         
-Author: <input type="text" name="author" list="authors" />
-        <datalist id="authors">
+Author First Name: <input type="text" name="authorFName" list="authorF" />
+        <datalist id="authorF">
             <?php
 
                 foreach ($db->query("SELECT * FROM authors") as $row) {
-                    $name = $row['firstname'] . " " . $row['lastname'];
+                    $name = $row['firstname'];
                     echo '<option>' . $name . '</option>';
                 }
 
             ?>     
         </datalist><br>
         
+Author Last Name: <input type="text" name="authorLname" list="authorL" />
+        <datalist id="authorL">
+            <?php
+
+                foreach ($db->query("SELECT * FROM authors") as $row) {
+                    $name = $row['lastname'];
+                    echo '<option>' . $name . '</option>';
+                }
+
+            ?>     
+        </datalist><br>
         
         
 Genre:  <select name="genre">

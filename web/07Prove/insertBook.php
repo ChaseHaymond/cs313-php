@@ -12,7 +12,9 @@ include("dbconection.php");
 <?php
 
     $title = $_GET['title'];
-    $author = $_GET['author'];
+    $fName = $_GET['authorFname'];
+    $lName = $_GET['authorLname'];
+    $author = $fName . " " . $lName;
     $genre = $_GET['genre'];
     $sdate = $_GET['sdate'];
     $edate = $_GET['edate'];
@@ -41,7 +43,15 @@ include("dbconection.php");
         
         $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
         $stmt = $db->prepare($query);
-        $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
+        $stmt->bindValue(':firstName', $fName, PDO::PARAM_STR);
+        $stmt->execute();
+        
+        echo $authorId;
+        $authorId = $db->lastInsertId('authors_id_seq');
+        
+        $query = 'INSERT INTO authors (lastName) VALUES (:lastName)'; 
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':lastName', $lName, PDO::PARAM_STR);
         $stmt->execute();
     }
     echo $authorId;
@@ -62,8 +72,6 @@ include("dbconection.php");
     
     $newSdate = date('Y-m-d', strtotime($sdate));
     $newEdate = date('Y-m-d', strtotime($edate));
-    
-    echo 'here';
     
     if(!$_GET['edate']){
         $query = 'INSERT INTO history (user_id, book_id, startDate) VALUES (:user_id, :book_id, :startDate)';
