@@ -73,11 +73,11 @@ include("dbconection.php");
 //        $stmt->execute();
         
         
-        
+        $aid = $row['author_id']
         //$sql = "UPDATE users SET name=?, surname=?, sex=? WHERE id=?";
-        $sql = "UPDATE authors SET fName=?, lName=:? WHERE author_id=?";
+        $sql = "UPDATE authors SET fName=?, lName=:? WHERE id=?";
         echo "1";
-        $dpo->prepare($sql)->execute([$fName, $lName, $row['author_id']]);
+        $dpo->prepare($sql)->execute([$fName, $lName, $aid]);
         
 //        $stmt= $dpo->prepare($sql);
 //        echo "2";
