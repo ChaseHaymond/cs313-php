@@ -58,8 +58,7 @@ if($_GET['showAll']){
         echo '<td id="title">' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
-             '<td>' . $row['enddate'] . '</td>' .
-             '<td>' . '<button id="button" name="button" onClick=\'location.href="./update.php?id=' . $row['history_id'] . '"\'>Edit</button>' . '</td>';
+             '<td>' . $row['enddate'] . '</td>';
 
         echo '</tr>';
     }
@@ -90,8 +89,7 @@ if($_GET['showAll']){
         echo '<td>' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
-             '<td>' . $row['enddate'] . '</td>' .
-             '<td>' . '<button id="button" name="button" onClick=\'location.href="./update.php?id=' . $row['history_id'] . '"\'>Edit</button>' . '</td>';
+             '<td>' . $row['enddate'] . '</td>';
 
         echo '</tr>';
     }
@@ -119,8 +117,7 @@ if($_GET['showAll']){
         echo '<td id="title">' . $row['name'] . '</td>' .
              '<td>' . $row['firstname'] . " " . $row['lastname'] . '</td>' .
              '<td>' . $row['startdate'] . '</td>' .
-             '<td>' . $row['enddate'] . '</td>' .
-             '<td>' . '<button id="button" name="button" onClick=\'location.href="./update.php?id=' . $row['history_id'] . '"\'>Edit</button>' . '</td>';
+             '<td>' . $row['enddate'] . '</td>';
         
         echo '</tr>';
     }
