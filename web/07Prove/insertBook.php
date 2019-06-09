@@ -12,7 +12,9 @@ include("dbconection.php");
 <?php
 
     $title = $_GET['title'];
-    $author = $_GET['author'];
+    $authorLname = $_GET['authorLname'];
+    $authorFname = $_GET['authorFname'];
+    $author = $_GET['authorFname'] . " " . $_GET['authorLname'];
     $genre = $_GET['genre'];
     $sdate = $_GET['sdate'];
     $edate = $_GET['edate'];
