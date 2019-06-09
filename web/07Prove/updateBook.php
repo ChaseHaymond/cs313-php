@@ -73,7 +73,7 @@ include("dbconection.php");
 //        $stmt->execute();
         
         
-        $aid = $row['author_id']
+        $aid = $row['author_id'];
         //$sql = "UPDATE users SET name=?, surname=?, sex=? WHERE id=?";
         $sql = "UPDATE authors SET fName=?, lName=:? WHERE id=?";
         echo "1";
