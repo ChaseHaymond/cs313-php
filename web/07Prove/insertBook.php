@@ -51,7 +51,7 @@ include("dbconection.php");
         $stmt->bindValue(':lastName', $authorLname, PDO::PARAM_STR);
         $stmt->execute();
     }
-    echo $authorId;
+    echo '0';
     $authorId = $db->lastInsertId('authors_id_seq');
 
     $query = 'INSERT INTO books (name, author_id, genre) VALUES (:name, :authorId, :genre)';
