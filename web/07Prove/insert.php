@@ -19,7 +19,7 @@ include("dbconection.php");
     
     
     <strong>Insert a new book</strong><br><br>
-    <form action="./insertBook.php" method="post">
+    <form action="./insertBook.php" method="get">
         
 Title: <input type="text" name="title"><br>
         

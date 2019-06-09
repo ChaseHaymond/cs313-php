@@ -5,7 +5,7 @@ include("dbconection.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chase Haymond Prove07</title>
+  <title>Chase Haymond Prove06</title>
 </head>
 <body >
 
@@ -62,6 +62,8 @@ include("dbconection.php");
     
     $newSdate = date('Y-m-d', strtotime($sdate));
     $newEdate = date('Y-m-d', strtotime($edate));
+    
+    echo 'here';
     
     if(!$_GET['edate']){
         $query = 'INSERT INTO history (user_id, book_id, startDate) VALUES (:user_id, :book_id, :startDate)';
