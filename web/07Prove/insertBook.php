@@ -69,7 +69,7 @@ include("dbconection.php");
     
     $newSdate = date('Y-m-d', strtotime($sdate));
     $newEdate = date('Y-m-d', strtotime($edate));
-    
+    echo '1';
     if(!$_GET['edate']){
         $query = 'INSERT INTO history (user_id, book_id, startDate) VALUES (:user_id, :book_id, :startDate)';
         $stmt = $db->prepare($query);
@@ -77,6 +77,8 @@ include("dbconection.php");
         $stmt->bindValue(':user_id', $userId, PDO::PARAM_STR);
         $stmt->bindValue(':book_id', $bookId, PDO::PARAM_INT);
         $stmt->bindValue(':startDate', $newSdate, PDO::PARAM_STR);
+        
+        echo '2';
 
         $stmt->execute();
     } else {
@@ -87,6 +89,8 @@ include("dbconection.php");
         $stmt->bindValue(':book_id', $bookId, PDO::PARAM_INT);
         $stmt->bindValue(':startDate', $newSdate, PDO::PARAM_STR);
         $stmt->bindValue(':endDate', $newEdate, PDO::PARAM_STR);
+        
+        echo '3';
 
 
         $stmt->execute();
