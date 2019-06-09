@@ -19,30 +19,17 @@ include("dbconection.php");
     
     
     <strong>Insert a new book</strong><br><br>
-    <form action="./insertBook.php" method="get">
+    <form action="./insertBook.php" method="post">
         
 Title: <input type="text" name="title"><br>
         
         
-Author First Name: <input type="text" name="authorFname" list="authorFname" />
-        <datalist id="authorFname">
+Author: <input type="text" name="author" list="authors" />
+        <datalist id="authors">
             <?php
 
                 foreach ($db->query("SELECT * FROM authors") as $row) {
-                    $fName = $row['firstname'];
-                    echo '<option>' . $name . '</option>';
-                }
-
-            ?>     
-        </datalist><br>
-        
-        
-Author First Name: <input type="text" name="authorLname" list="authorLname" />
-        <datalist id="authorLname">
-            <?php
-
-                foreach ($db->query("SELECT * FROM authors") as $row) {
-                    $lName = $row['lastname'];
+                    $name = $row['firstname'] . " " . $row['lastname'];
                     echo '<option>' . $name . '</option>';
                 }
 
