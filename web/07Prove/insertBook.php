@@ -43,7 +43,12 @@ include("dbconection.php");
         
         $query = 'INSERT INTO authors (firstName) VALUES (:firstName)'; 
         $stmt = $db->prepare($query);
-        $stmt->bindValue(':firstName', $author, PDO::PARAM_STR);
+        $stmt->bindValue(':firstName', $authorFname, PDO::PARAM_STR);
+        $stmt->execute();
+        
+        $query = 'INSERT INTO authors (lastName) VALUES (:lastName)'; 
+        $stmt = $db->prepare($query);
+        $stmt->bindValue(':lastName', $authorLname, PDO::PARAM_STR);
         $stmt->execute();
     }
     echo $authorId;
